@@ -1,0 +1,701 @@
+
+
+body{
+    /* background-color: navy; */
+  }
+    
+    header {
+      /* z-index: 1; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      /* background: linear-gradient(to bottom, rgba(167, 164, 164, 0.365) 0%, rgba(128, 128, 128, 0) 95%); */
+      /* background-color: rgba(128, 128, 128, 0.369); */
+  
+  
+  
+  
+      position: relative; /* For positioning dropdowns */
+  }
+  
+  
+   
+  #logo {
+    position: fixed;
+    top: 20px;
+    left: 8%;
+    margin-right: 20px;
+    z-index: 1500;
+  }
+  
+  #logo img {
+    width: 80px; /* Default logo size */
+    transition: width 0.3s ease; /* Smooth transition when resizing */
+  }
+  
+  .drop-downs {
+    transition: background-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease; /* Smooth transitions */
+    font-family: Calibri;
+    color: white;
+    z-index: 1200; /* Dropdown behind logo */
+    font-size: 18px; /* Default font size */
+    margin-right: 6%;
+    margin-left: 19%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 44px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 3.5rem;
+    width: 70%;
+  }
+  
+  
+    
+    
+    .drop-downs p:hover{
+     
+      font-weight: bolder;
+      cursor: pointer;
+    text-decoration:underline 2px solid red;
+    }.massage-dropdown a{
+      text-decoration: none;
+      color: black;
+    }
+    
+    .massage-dropdown {
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: fixed; /* Change to fixed */
+      cursor: pointer;
+      top: 19%; /* Use 'top' to replace margin-top for fixed positioning */
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+      .massage-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }
+    .wellness-dropdown{
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: fixed; /* Change to fixed */
+      cursor: pointer;
+      top: 19%; /* Use 'top' to replace margin-top for fixed positioning */
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }.wellness-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }.wellness-dropdown a{
+      text-decoration: none;
+      color: black;
+    }
+    
+    .sleep-dropdown{
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: fixed; /* Change to fixed */
+      cursor: pointer;
+      top: 19%; /* Use 'top' to replace margin-top for fixed positioning */
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }.sleep-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }.sleep-dropdown a{
+      text-decoration: none;
+      color: black;
+    }
+    
+    .second-sleep-dropdown{
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: fixed; /* Change to fixed */
+      cursor: pointer;
+      top: 19%; /* Use 'top' to replace margin-top for fixed positioning */
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }.second-sleep-dropdown p:hover{
+      cursor: pointer;
+      color: red;
+    }.second-sleep-dropdown a{
+      text-decoration: none;
+      color: black;
+    }.second-sleep-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }
+    
+    .other-sleep-dropdown{
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: fixed; /* Change to fixed */
+      cursor: pointer;
+      top: 18%; /* Use 'top' to replace margin-top for fixed positioning */
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }.other-sleep-dropdown p:hover{
+      cursor: pointer;
+      color: red;
+    }.other-sleep-dropdown a{
+      text-decoration: none;
+      color: black;
+    }.other-sleep-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }
+    .about-sleep-dropdown{
+      z-index: 12;
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: absolute;
+      cursor: pointer;
+      margin-top: 4.5%;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }.about-sleep-dropdown p:hover{
+      cursor: pointer;
+      color: red;
+    }.about-sleep-dropdown a{
+      text-decoration: none;
+      color: black;
+    }.about-sleep-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }
+    .indus-sleep-dropdown{
+      width: 100%;
+      z-index: 12;
+      display: flex;
+      position: fixed; /* Change to fixed */
+      cursor: pointer;
+      top: 15%; /* Use 'top' to replace margin-top for fixed positioning */
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }.indus-sleep-dropdown p:hover{
+      cursor: pointer;
+      color: red;
+    }.indus-sleep-dropdown a{
+      text-decoration: none;
+      color: black;
+    }.indus-sleep-dropdown a:hover{
+      cursor: pointer;
+      color: red;
+    }
+    .list1{
+      font-weight: bold;
+      margin-left: 17%;
+      width: 80%;
+      display: flex;
+    
+    }.sub-title-menu{
+      margin-top: -5%;
+      font-weight: lighter;
+    }
+    .list2{
+      width: 40%;
+      display: flex;
+    
+    }
+    
+    #massage-img, #foot-image{
+      margin-top: 6%;
+      width: 90%;
+    }
+    
+    #massage-chairs, #massage-guns, #neck-back, #best-sellers{
+      margin-top: 5%;
+      margin-left: 8%;
+    }
+    .hidden{
+      display: none;
+    }
+    
+    .main-body{
+      width: 100%;
+      display: flex;
+      margin-bottom: 3%;
+    }
+    .wakeup-slider{
+      padding-top: 8%;
+      z-index: -1;
+      width: 60%;
+    }
+    .wakeup-slider img{
+      margin-top: 0.7%;
+      cursor: pointer;
+      width: 100%;
+    }
+    .image-grid{
+      padding-top: 8%;
+      display: grid;
+      padding-left: 1%;
+      column-gap: 2%;
+      grid-template-columns: repeat(2,1fr);
+      width: 40%;
+    }
+    .image-grid img{
+      width: 100%;
+    }
+    
+    .item1{
+      grid-column-start: 1;
+      grid-column-end: 3;
+     
+    }
+    .image-grid{
+      margin-top: 1%;
+    }
+    /* Mobile Styles */
+  
+    
+  
+   
+  
+  .navbar {
+    display: none;
+        }
+       
+    
+  
+    #menu-container {
+      display: none;
+  }
+  
+  
+  .newline {
+      width: 100%;
+      height: 4px;
+      background-color: black;
+      border-radius: 2px;
+  }
+  
+  #dropdown-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+  }
+  
+  .menu-item {
+      padding: 15px 20px;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+  }
+  
+  .menu-item:hover {
+      background-color: #f0f0f0;
+  }
+  
+  .submenu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f9f9f9;
+      width: 100%;
+      border-top: 1px solid #eee;
+  }
+  
+  .submenu-item {
+      padding: 10px 20px;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #eee;
+  }
+  
+  .submenu-item:hover {
+      background-color: #e0e0e0;
+  }
+  
+  @media (max-width: 768px) {
+      #menu-container {
+        z-index: 999;
+          display: block;
+      }
+  }@media only screen and (max-width: 1920px) {
+    /* Your CSS rules for MacBook Air go here */
+    #top-header{
+      /* margin-left: -3rem; */
+    }#hrline{
+      z-index: 2;
+      margin-top: -0.3%;
+      width: 75%;
+      background-color: white;
+      margin-left: -2%;
+  }
+  }
+  
+  
+  #top-header {
+    margin-left: -5%;
+  }#navbar {
+    font-family: Calibri;
+    position: relative; /* Navbar remains relative */
+    top: 2.5rem; /* Stick the navbar to the top */
+    left: 12.2rem;
+    width: 100%; /* Ensure the navbar spans the full width of the screen */
+  
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  #logo {
+    position: fixed; /* Make the logo fixed */
+    top: 20px; /* Adjust the vertical position of the logo */
+    left: 8%; /* Adjust the horizontal position */
+    margin-right: 20px; /* Small gap between logo and first menu item */
+  
+  }
+  
+  #logo img {
+    width: 80px; /* Default logo size */
+    transition: width 0.3s ease; /* Smooth transition when resizing */
+  }
+  
+  
+  #nav-links {
+      display: flex;
+      list-style: none;
+      margin-left: 2.5%;
+      padding: 0;
+      align-items: center;
+      flex-grow: 1;
+      margin-top: -3%;
+  }
+  
+  #nav-links li {
+      margin-right: 20px;
+      position: relative;
+  }#main-topconinter-topper{
+      height: 100vh;
+  }
+  
+  
+  #nav-links li:last-child {
+      margin-right: 0;
+  }
+  
+  #nav-links a {
+      text-decoration: none;
+      color: white;
+      /* font-weight: bold; */
+  }
+  
+  .spacer {
+      flex-grow: 0.2; /* Add space between sections */
+  }
+  
+  #additional-buttons {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      /* column-gap: 1px; */
+      padding: 0;
+      margin-right: 10%;
+  }
+  
+  #additional-buttons li {
+      margin-right: 5px;
+      position: relative;
+  }
+  
+  
+  
+  #additional-buttons li:last-child::after {
+      display: none; 
+  }
+  
+  #additional-buttons a {
+      text-decoration: none;
+      font-weight: bold;
+  }
+  .book-meeting a {
+    font-size: 14px;
+    background: linear-gradient(135deg, #001f54, #003f87); 
+    color: white;
+    padding: 4px 5px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: background 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+  }
+  
+  
+  .quote-request a:hover{
+    background: linear-gradient(135deg, #003f87, #001f54); 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+  }
+  .quote-request a {
+    font-size: 14px;
+    background: linear-gradient(135deg, #001f54, #003f87); 
+    color: white;
+    padding: 4px 5px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease; 
+    display: inline-block;
+  }#chat-now a {
+    font-size: 14px;
+    background: linear-gradient(135deg, #001f54, #003f87); 
+    color: white;
+    padding: 4px 5px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: background 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+  }
+  .book-meeting a:hover {
+    background: linear-gradient(135deg, #003f87, #001f54); 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+  }#chat-now a:hover{
+    background: linear-gradient(135deg, #003f87, #001f54); 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+  }    #main-container-mobile-view {
+    margin: 0;
+    padding: 0;
+    /* z-index: 2; */
+    font-family: Arial, sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    #background-image {
+        z-index: -1;
+        /* width: 100%;
+        margin-left: -15%; */
+    }
+    .background-img {
+        position: relative;
+        margin-top: -6%;
+        left: 10%;
+        z-index: -1;
+    }
+    .background-img img {
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+    }
+    .background-gif {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        /* overflow: hidden; */
+    }
+    .background-gif img {
+      width: 180%;
+      margin-left: -80%;
+        height: 100vh;
+        /* object-fit: cover; */
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+  }
+  
+  .mobile-nav {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    
+    .mobile-nav {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  gap: 9%;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* padding-right: 52%; */
+  /* padding: 0 ; */
+  margin: 0;
+  background-color: rgb(38, 55, 141);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  
+  z-index: 1020;
+  overflow: hidden;
+  width: 100%;
+  } #boostconent-first-new{
+  margin-top: -155%;
+  font-size: 20px;
+  }
+    #right-text {
+        font-size: 18px;
+        margin-right: 2%;
+        margin-top: 30%;
+        padding-left: 5%;
+        padding-top: 15%;
+        text-align: left;
+    }
+    #left-text {
+        margin-top: 8%;
+        margin-left: -5%;
+        text-align: left;
+    }
+    .highlight {
+        font-weight: bolder;
+        margin-left: 4rem;
+        color: orangered;
+        font-size: 3em;
+        position: relative;
+    }
+    #years-highlight {
+        margin-top: -5%;
+    }
+    #second-verticel-line {
+        margin-left: 4%;
+        margin-top: 8rem;
+        height: 19vh;
+        width: 0.1px;
+    }
+    #second-hrline {
+        width: 900px;
+        margin-top: -40%;
+        margin-bottom: 45%;
+        background-color: white;
+    }
+    .logo img {
+        height: 40px;
+        margin-top: 1%;
+        /* margin-left: 50%; */
+    }
+    .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .quote-button button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 44px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .whatsapp-icon img {
+        width: 120%;
+        margin-top: 1%;
+        /* margin-right: 10%; */
+        cursor: pointer;
+    }
+    .menu {
+        display: none;
+        position: fixed;
+        top:0;
+        z-index: 1010;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(38, 55, 141);
+        color: white;
+    }
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        /* height: 150vh; */
+    }
+    .menu li {
+      /* display: inline-block; */
+        padding: 20px;
+        border-bottom: 1px solid white ;
+        cursor: pointer;
+        
+    }
+    .menu li a {
+        text-decoration: none;
+        color: black;
+    }
+    .submenu {
+      display: none;
+      background-color: white;
+      color: black;
+      /* margin-left: -5%; */
+      width: 90%;
+      max-height: 100vh; /* Adjust this value as needed */
+      overflow-y: auto;
+  }
+    .menu li:hover .submenu {
+        display: block;
+    } .submenu a{
+      color: black;
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .list1 {
+        font-weight: bold;
+        margin-left: 17%;
+        width: 80%;
+        /* height: auto; */
+        display: block;
+    }
+    .about-sleep-dropdown {
+        margin-top: 7%;
+    }
+    .background-gif {
+        z-index: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #main-topconinter-topper {
+        display: none;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    #main-container-mobile-view {
+        display: none;
+    }
+  }@media (max-width: 768px) {
+    .very-new-navbartext-overlay {
+        font-family: "Calgary-Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  }.sub-title-menu{
+    margin-top: -2%;
+  }.fa-caret-down{
+    
+  }
+  }

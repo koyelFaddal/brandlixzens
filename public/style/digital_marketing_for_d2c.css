@@ -1,0 +1,418 @@
+
+#top-heading{
+    margin-top: -20%;
+}
+#d2c-second-section-conatiner{
+    margin-top: -10%;
+    display: flex;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 100%;
+    gap: 10%;
+}#heading-second-d2c{
+    width: 30%;
+    font-size: 22px;
+    /* margin-top: 5%; */
+}#para-second-d2c{
+    width: 40%;
+    font-size: 20px;
+}#orage-red-box{
+   
+   
+    width: 80%;
+    margin-left: 10%;
+    height: 80px;
+}#blue-container-seo-new{
+    background-color: rgb(245, 35, 35);
+    margin-top: 5%;
+    /* border-radius: 14px; */
+}
+#bellow-content-heading-para-d2c{
+    width: 30%;
+}#top-heading-container-seo-bellow{
+    color: blue;
+    margin-left: 10%;
+    /* font-weight: 35px; */
+}#top-heading-paraa-seo-d2clladt-bellow{
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 10%;
+    margin-right: 10%;
+}#top-heading-container-seo-bellow h3 {
+    font-size: 35px;
+}#container-overlap-d2c{
+    margin: auto;
+    color: white;
+}
+.new-d2c-last-container {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.new-d2c-last-left-section, .new-d2c-last-right-section {
+    flex: 1;
+    height: 100%;
+}
+.new-d2c-last-left-section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.new-d2c-last-left-section h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+.new-d2c-last-right-section {
+    background-color: #0000FF; /* Blue color for the right section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    /* margin-left: -2%; */
+}
+.new-d2c-last-right-section p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding-left: 10%;
+    padding-right: 5%;
+    margin: 0;
+}
+.new-d2c-last-image-new-d2c-last-container {
+    margin-top: 20px;
+}
+.new-d2c-last-image-new-d2c-last-container img {
+    max-width: 100%;
+    height: auto;
+}/* Responsive design for laptop screens */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section {
+        padding: 15px;
+    }
+
+    .right-section {
+        padding: 15px;
+        text-align: justify;
+    }
+
+    .left-section h1 {
+        font-size: 2rem; /* Slightly smaller font size for laptops */
+    }
+
+    .right-section p {
+        font-size: 0.9rem;
+    }
+
+    .image-container img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section, .right-section {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .left-section h1 {
+        font-size: 1.8rem; /* Smaller font size for mobile screens */
+    }
+
+    .right-section p {
+        font-size: 0.85rem;
+    }
+
+    .image-container img {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+#new-d2c-text-content-para-first{
+    margin-left: 10%;
+    margin-right: 10%;
+}.new-d2c-text-content h1{
+    margin-left: 6%;
+}
+
+
+.ai-section {
+    margin-top: 5%;
+    background-image: url('../picture/Body Section AI.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    position: relative;
+    color: #fff;
+}
+
+.ai-d2ccontent-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.ai-d2c-text-left {
+    width: 85%;
+    margin-top: -2%;
+}.ai-d2c-text-right {
+    width: 45%;
+}.small-text-detail{
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.ai-d2c-text-left h2 {
+    font-size: 2rem;
+    margin-left: 3%;
+    margin-bottom: 20px;
+}
+
+.ai-d2c-text-left p, .ai-d2c-text-right p {
+    font-size: 1.4rem;
+    /* line-height: 1.6; */
+}.ai-d2c-text-left p{
+    margin-right: -50%;
+    margin-left: 10%;
+}
+
+.ai-d2c-text-right {
+    margin-top: 25%; /* Adjust this to position the text relative to the robot */
+}
+
+/* Optional: For better responsive design on smaller screens */
+@media screen and (max-width: 768px) {
+    .ai-d2ccontent-wrapper {
+        flex-direction: column;
+    }.ai-section {
+        height:auto;
+    }.ai-d2c-text-left p, .ai-d2c-text-right p {
+        font-size:20px;
+    }
+    .ai-d2c-text-left, .ai-d2c-text-right {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .ai-d2c-text-right {
+        margin-top: 40px;
+    }#d2c-second-section-conatiner{
+        display: block;
+    }#heading-second-d2c{
+        width: 80%;
+        margin-top: 5%;
+    }#para-second-d2c{
+        width: 80%;
+        font-size: 20px;
+    }.new-d2c-last-container {
+        display: block;
+}.ai-d2c-text-left h2 {
+    margin-top: -5%;
+    margin-left: -5%;
+    margin-right: -20%;
+}.ai-d2c-text-left p{
+    margin-right: -10%;
+    margin-left: -10%;
+}.ai-d2c-text-right p{
+    margin-left: -7%;
+}
+.new-d2c-last-right-section p {
+    font-size: 20px;
+}.new-d2c-last-container{
+    height: auto;
+}
+
+}
+.new-d2c-image-container {
+    margin-top: -1%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-new-d2c {
+    position: absolute;
+    top: 8%;
+    margin-right: 15%;
+    left: 15%;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: "Calgary-Bold";
+    z-index: 10;
+}
+
+#para-text-d2c {
+    position: absolute;
+    top: 18%; /* Adjusted top positioning */
+    left: 18%;
+    font-size: 23px;
+    margin-right: 20%;
+    color: #ffffff;
+
+}
+
+.image-newd2c {
+    display: block;
+    width: 100%;
+    height: auto; /* Adjusts height according to the image aspect ratio */
+}
+
+.background-newdec {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #382017ff;
+    z-index: 1;
+    padding-bottom: 5%; /* Added padding to create space at the bottom */
+}#para-bullet-d2c-para{
+    position: relative; 
+    font-size: 35px;
+}
+
+#para-bullet-d2c {
+    background-color: #382017ff;
+    width: 100%;
+    position: relative; /* Changed from absolute to relative */
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 2; /* Ensure it appears above the background */
+    margin-top: 5%; /* Added margin to create space from the above content */
+    padding-bottom: 5%; /* Added padding to create space at the bottom */
+}.benefit-heading {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+#para-bullet-d2c ul {
+    margin-top: -22%;
+    margin-right: 10%;
+    margin-left: 15%;
+    
+}#para-bullet-d2c li {
+    font-size: 18px;
+    font-weight: lighter;
+margin-top: 5%;
+    margin-left: 8%;
+}#hrline-d2c{
+    /* padding-top: -3%; */
+    margin-bottom: 5%;
+}
+
+/* Responsive for Tablet Screens */
+@media screen and (max-width: 1024px) {
+    .text-new-d2c {
+        top: 2%;
+        left: 5%;
+        font-size: 28px;
+    }
+
+    #para-text-d2c {
+        top: 35%;
+        left: 10%;
+        font-size: 20px;
+        margin-right: 15%;
+    }
+
+    #para-bullet-d2c {
+        position: relative; /* Changing to relative for better responsiveness */
+        font-size: 20px;
+        margin: 5% 5%;
+    }
+
+    #para-bullet-d2c ul {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #hrline-d2c {
+        margin: 5% 0;
+    }
+
+    #para-bullet-d2c ul {
+        padding-left: 5px;
+        padding-right: 5%;
+    }
+
+    #para-bullet-d2c li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive for Mobile Screens */
+@media screen and (max-width: 768px) {
+    #main-id-conatiner{
+        margin-top: 1%;
+        width: 100%;
+        height: auto;
+        background-color: #39595eff;
+    }#d2c-second-section-conatiner{
+        margin-top: -10%;
+    }
+    .new-d2c-image-container {
+        margin-top: 10%;
+    }
+
+    .text-new-d2c {
+        top: 5%;
+        left: 5%;
+        font-size: 24px;
+    }
+
+    #para-text-d2c {
+        top: 15%; /* Adjusted top position for visibility */
+        left: 5%;
+        font-size: 18px;
+        margin-right: 10%;
+       
+    }
+
+    #para-bullet-d2c {
+        margin-top: -5%;
+        font-size: 18px;
+        z-index: 2;
+    }
+
+    #para-bullet-d2c ul {
+        padding-top: 25%;
+    }
+
+    .background-newdec {
+        overflow: hidden;
+    }.image-newd2c {
+        display: block;
+        
+        height: 80vh; /* Adjusts height according to the image aspect ratio */
+    }#new-connectbutton-seo{
+        margin-top: -5%;
+    }
+}
+#para-second-d2c p{
+    padding-bottom: 15%;
+}
