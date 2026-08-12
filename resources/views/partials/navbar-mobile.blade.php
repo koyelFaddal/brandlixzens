@@ -6,10 +6,10 @@
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
         </div>
-        <div class="quote-button">
-            <button>Request for Quote</button>
+        <div class="quote-button" data-action="quote-request">
+            <button type="button">Quote Request</button>
         </div>
-        <div onclick="openWhatsApp()" class="whatsapp-icon">
+        <div class="whatsapp-icon" data-action="whatsapp">
             <img src="../picture/image23096.png" alt="WhatsApp">
         </div>
     </div>
@@ -33,6 +33,7 @@
             </ul>
         </li>
         <li><a style="color: white;" href="/about-us/digital-marketing">Digital Marketing</a></li>
+        <li><a style="color: white;" href="https://calendly.com/koyelp210/30min" data-action="book-meeting">Book Your Meeting</a></li>
         <li class="dropdown-trigger">
             Optimization
             <i class="fas fa-caret-down dropdown-icon"></i>

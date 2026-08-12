@@ -243,10 +243,10 @@ body{
                 <div class="line1"></div>
                 <div class="line2"></div>
             </div>
-            <div class="quote-button">
-                <button>Request for Quote</button>
+            <div class="quote-button" data-action="quote-request">
+                <button type="button">Quote Request</button>
             </div>
-            <div onclick="openWhatsApp()" class="whatsapp-icon">
+            <div class="whatsapp-icon" data-action="whatsapp">
                 <img src="./picture/image23096.png" alt="WhatsApp">
             </div>
         </div>
@@ -418,9 +418,9 @@ body{
                     <li><a href="">Snippets</a></li>
                     <div class="spacer"></div> <!-- Spacer to push the buttons to the end -->
                     <ul id="additional-buttons">
-                        <li class="quote-request"><a href="#">Quote Request</a></li>
-                        <li class="book-meeting"><a href="#">Book Your Meeting</a></li>
-                        <li id="chat-now"><a href="#">Chat Now <i class="fab fa-whatsapp"></i></a></li>
+                        <li class="quote-request"><a href="#name-adding-form" data-action="quote-request">Quote Request</a></li>
+                        <li class="book-meeting"><a href="https://calendly.com/koyelp210/30min" data-action="book-meeting">Book Your Meeting</a></li>
+                        <li id="chat-now"><a href="https://web.whatsapp.com/send?phone=+918348101800" data-action="whatsapp">Chat Now <i class="fab fa-whatsapp"></i></a></li>
                     </ul>
                 </ul>
     
@@ -1266,24 +1266,29 @@ body{
     
     </div>
 
-    <div id="seo-icon-container">
+    <div id="seo-icon-container" data-newsletter-section>
         <p id="subscribe-title">Subscribe to our Newsletter</p>
         <div class="unique-container">
-            <div class="content-box">
-                <form class="email-subscription">
-                    <input class="email-input" type="email" placeholder="Enter Email ID">
-                    <button class="email-button" type="button">
-                        <span class="before-submit">Subscribe</span>
-                        <span class="after-submit">Thank you for subscribing!</span>
-                    </button>
-                </form>
+        <div class="content-box newsletter-content-box">
+            <form class="email-subscription newsletter-subscription-form" data-newsletter-form method="POST" action="{{ route('newsletter.subscribe') }}">
+                @csrf
+                <div class="newsletter-input-row">
+                    <input class="email-input" type="email" name="email" placeholder="Enter Email ID" required>
+                    <button class="email-button" type="submit">Subscribe</button>
+                </div>
+                <p class="newsletter-status-message" data-newsletter-message aria-live="polite"></p>
+            </form>
             </div>
             
         </div>
         <div class="mobile-only-below-top-right">
-            <form id="input-form-below-top-right">
-              <input type="text" id="input-box-below-top-right" placeholder="Enter Email ID">
-              <button type="submit" id="submit-button-below-top-right">Subscribe</button>
+            <form id="input-form-below-top-right" class="newsletter-subscription-form" data-newsletter-form method="POST" action="{{ route('newsletter.subscribe') }}">
+              @csrf
+              <div class="newsletter-input-row">
+                <input type="email" name="email" id="input-box-below-top-right" placeholder="Enter Email ID" required>
+                <button type="submit" id="submit-button-below-top-right">Subscribe</button>
+              </div>
+              <p class="newsletter-status-message" data-newsletter-message aria-live="polite"></p>
             </form>
           </div>
           <div class="icon-container">
@@ -1674,9 +1679,6 @@ const hideDropdown = (dropdownClass) => {
                     line.classList.add('animated');
                 }, index * 1000); // Adjust the delay as needed
             });
-        }); document.querySelector('.email-button').addEventListener('mousedown', (e) => {
-            e.preventDefault();
-            document.querySelector('.email-subscription').classList.add('done');
         });
 
         
@@ -1799,12 +1801,6 @@ function toggleMenu() {
         window.location.href = "/design-development/website-design-development";
     });
     
-    document.getElementById('input-form-below-top-right').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const inputText = document.getElementById('input-box-below-top-right').value;
-      alert(`Submitted: ${inputText}`);
-    });
-   
 
 
 function openWhatsApp() {
@@ -2059,6 +2055,8 @@ window.addEventListener('load', function() {
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="{{ asset('script/site-actions.js') }}?v=3"></script>
+  <script src="{{ asset('script/newsletter-subscription.js') }}?v=1"></script>
 
 
 </body>

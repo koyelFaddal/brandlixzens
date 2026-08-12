@@ -9,7 +9,7 @@
     <meta name="description" content="Generate online leads and emerge as online brand through AI powered Meta Advertising Services of Brandixzen for Facebook Ads and Instagram Advertising.">
     <link rel="stylesheet" href="../style/footer.css">
     <script src="../script/script.js"></script>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=2">
     <link rel="stylesheet" href="../nav2.css">
     <link rel="stylesheet" href="../style/seo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -210,7 +210,7 @@ margin-top: -10%;
         <div id="new-connectpara-seo-conatiner">
             <p id="new-connectpara-seo">The Comprehensive Components of Meta Advertising</p>
         </div>
-        <div id="new-connectbutton-seo-conatiner"><button id="new-connectbutton-seo">Connect Now</button></div>
+        <div id="new-connectbutton-seo-conatiner"><button id="new-connectbutton-seo" type="button" data-action="newsletter">Connect Now</button></div>
     </div>
 
     <div id="center-align-between-tag-container">
@@ -409,7 +409,7 @@ benefits:
                 strategies can
                 transform your business and deliver outstanding results.
             </p> -->
-            <button id="new-old-connect-button">Connect Now</button>
+            <button id="new-old-connect-button" type="button" data-action="newsletter">Connect Now</button>
         </div>
     </div>
     <div id="main-conatiner-faq-container">
@@ -505,7 +505,7 @@ benefits:
                     <h3>Do you have more questions?</h3>
                     <p>End-to-end payments and financial management in a single solution. Meet the right platform to
                         help realize.</p>
-                    <button id="shoot-email">Shoot a Direct Mail</button>
+                    <button id="shoot-email" type="button" data-action="newsletter">Shoot a Direct Mail</button>
                 </div>
             </div>
         </div>
@@ -634,18 +634,6 @@ document.querySelectorAll('.faq-question').forEach(item => {
             btn.textContent = '-';
         }
     });
-});
-
-
-    document.getElementById('input-form-below-top-right').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const inputText = document.getElementById('input-box-below-top-right').value;
-      alert(`Submitted: ${inputText}`);
-    });
-
-    document.getElementById("shoot-email").addEventListener("click", function() {
-    // Redirects to the default email app with the recipient pre-filled
-    window.location.href = "mailto:sharmapujan209@gmail.com";
 });
 
 

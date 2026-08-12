@@ -137,24 +137,29 @@
     </div>
 
 </div>
-<div id="seo-icon-container">
+<div id="seo-icon-container" data-newsletter-section>
     <p id="subscribe-title">Subscribe to our Newsletter</p>
     <div class="unique-container">
-        <div class="content-box">
-            <form class="email-subscription">
-                <input class="email-input" type="email" placeholder="Enter Email ID">
-                <button class="email-button" type="button">
-                    <span class="before-submit">Subscribe</span>
-                    <span class="after-submit">Thank you for subscribing!</span>
-                </button>
+        <div class="content-box newsletter-content-box">
+            <form class="email-subscription newsletter-subscription-form" data-newsletter-form method="POST" action="{{ route('newsletter.subscribe') }}">
+                @csrf
+                <div class="newsletter-input-row">
+                    <input class="email-input" type="email" name="email" placeholder="Enter Email ID" required>
+                    <button class="email-button" type="submit">Subscribe</button>
+                </div>
+                <p class="newsletter-status-message" data-newsletter-message aria-live="polite"></p>
             </form>
         </div>
         
     </div>
     <div class="mobile-only-below-top-right">
-        <form id="input-form-below-top-right">
-          <input type="text" id="input-box-below-top-right" placeholder="Enter Email ID">
-          <button type="submit" id="submit-button-below-top-right">Subscribe</button>
+        <form id="input-form-below-top-right" class="newsletter-subscription-form" data-newsletter-form method="POST" action="{{ route('newsletter.subscribe') }}">
+          @csrf
+          <div class="newsletter-input-row">
+            <input type="email" name="email" id="input-box-below-top-right" placeholder="Enter Email ID" required>
+            <button type="submit" id="submit-button-below-top-right">Subscribe</button>
+          </div>
+          <p class="newsletter-status-message" data-newsletter-message aria-live="polite"></p>
         </form>
       </div>
       <div class="icon-container">

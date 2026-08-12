@@ -1,5 +1,11 @@
 
     document.addEventListener("DOMContentLoaded", function () {
+        if (!window.brandixzenSiteActionsLoaded) {
+            const siteActionsScript = document.createElement('script');
+                siteActionsScript.src = '/script/site-actions.js?v=3';
+            document.head.appendChild(siteActionsScript);
+        }
+
         // Load footer template
         fetch('/partials/footer')
             .then(response => {
@@ -11,6 +17,14 @@
             })
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
+
+                if (window.initializeNewsletterForms) {
+                    window.initializeNewsletterForms();
+                } else {
+                    const newsletterScript = document.createElement('script');
+                    newsletterScript.src = '/script/newsletter-subscription.js?v=1';
+                    document.head.appendChild(newsletterScript);
+                }
 
                 if (window.initializeLeadForms) {
                     window.initializeLeadForms();
