@@ -347,28 +347,28 @@ overflow-y: auto; */
         align-items: center;
         justify-content: center;
         padding: 20px;
-        /* background-image: linear-gradient(to bottom, #87CEEB, #FFFFFF); */
-        background-color: navy;
-        height: 205vh;
-        position: absolute;
-        top: 0;
-        /* margin-top: 10%; */
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
+        background-color: rgba(0, 0, 128, 0.92);
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        z-index: 100000;
+        box-sizing: border-box;
+        overflow: hidden;
     }
     
     .modal-content {
         background: #ffffff;
         padding: 30px;
         border-radius: 15px;
-        width: 80%;
-        margin-top: 17%;
-        max-width: 800px;
+        width: min(900px, 94vw);
+        margin: 0;
+        max-width: 900px;
+        max-height: calc(100vh - 40px);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         position: relative;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
     
     .close-button {
@@ -394,23 +394,22 @@ overflow-y: auto; */
     }
     
     #apply-form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        display: block;
+        width: 100%;
     }
     
     .form-row-new-old-first {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10%;
+        flex-wrap: nowrap;
+        gap: 30px;
+        width: 100%;
         margin-bottom: 15px;
         justify-content: space-between;
     }
     
     .form-group-new-old-first {
         flex: 1;
-        margin-bottom: 20px;
-        /* min-width: calc(50% - 20px); */
+        min-width: 0;
         margin-bottom: 15px;
         position: relative;
     }.form-row-new-old-first .form-group-new-old-first {
@@ -418,7 +417,9 @@ overflow-y: auto; */
     }
     
     .form-group-new-old-first.full-width {
-        min-width: 100%;
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 0;
     }
     
     .form-group-new-old-first label {
@@ -435,7 +436,7 @@ overflow-y: auto; */
         font-size: 18px; /* Adjust the size of the icon */
         color: #555; /* Adjust the color of the icon */
     }
-    .form-group-new-old-first.full-width textarea {
+    .form-group-new-old-first textarea {
         width: 100%;
         max-width: 100%; /* Full width for textareas */
         padding: 12px 16px;
@@ -509,7 +510,8 @@ overflow-y: auto; */
     
     @media (max-width: 600px) {
         .modal-content {
-            width: 95%;
+            width: 100%;
+            max-height: calc(100vh - 20px);
             padding: 20px;
         }.career-container {
         margin-top: 0;
@@ -522,6 +524,7 @@ overflow-y: auto; */
         
         .form-row-new-old-first {
             flex-direction: column;
+            gap: 0;
         }
         
         .form-group-new-old-first input, .form-group-new-old-first textarea {
@@ -568,15 +571,15 @@ overflow-y: auto; */
         bottom: 0;
         background: radial-gradient(circle at top left, rgba(240, 86, 86, 0.2), transparent);
         z-index: -1;
-    }#phone{
-        width: 80%;
-    }#linkedinede{
-        margin-left: -12%;
-        /* width: 80%; */
-    }#linkedined{
-        /* margin-left: -10%; */
-        width: 80%;
-    }@media (max-width: 768px) { /* Tablet and mobile screens */
+    }#phone,
+    #linkedined {
+        width: 100%;
+        max-width: 100%;
+    }
+    #linkedinede {
+        margin-left: 0;
+    }
+    @media (max-width: 768px) { /* Tablet and mobile screens */
     .filter-container {
         flex-direction: column; /* Stack buttons vertically */
         align-items: center; /* Center buttons */
@@ -600,6 +603,24 @@ overflow-y: auto; */
     }
 }
 
+    .career-job-actions { display:flex; align-items:center; gap:18px; }
+    .view-job-btn { border:0; background:transparent; color:#555; cursor:pointer; padding:6px 2px; font:600 14px/1.2 Arial,sans-serif; }
+    .view-job-btn i { margin-right:6px; color:#f05656; }
+    .view-job-btn:hover { color:#f05656; text-decoration:underline; }
+    .career-job-actions .apply-btn { appearance:none; border:0; background:transparent; padding:0; color:#f05656; font:700 20px/1.2 Georgia,serif; cursor:pointer; }
+    .career-details-modal { position:fixed; inset:0; z-index:100000; display:none; align-items:center; justify-content:center; padding:20px; }
+    .career-details-modal.is-open { display:flex; }
+    .career-details-backdrop { position:absolute; inset:0; background:rgba(10,10,40,.7); backdrop-filter:blur(5px); }
+    .career-details-panel { position:relative; width:min(820px,100%); max-height:calc(100vh - 40px); overflow:auto; padding:40px; border-radius:26px; background:#fff; color:#292929; box-shadow:0 30px 80px rgba(0,0,0,.3); }
+    .career-details-header { display:flex; align-items:center; gap:24px; margin:0 50px 28px 0; padding-bottom:25px; border-bottom:1px solid #eee; }
+    #job-details-image { display:none; width:145px; height:145px; flex:0 0 145px; border-radius:22px; object-fit:cover; box-shadow:0 12px 26px rgba(0,0,0,.14); }
+    .career-details-panel h2 { margin:10px 0 0; font-size:34px; line-height:1.15; }
+    .career-details-section { margin:22px 0; padding-left:20px; border-left:5px solid #f05656; }
+    .career-details-panel h3 { margin:0 0 6px; color:#222; font-size:20px; }
+    .career-details-panel p { white-space:pre-line; line-height:1.6; }
+    .career-details-close { position:absolute; top:14px; right:16px; width:42px; height:42px; border:0; border-radius:50%; background:#f5f5f5; font-size:28px; cursor:pointer; }
+    @media(max-width:600px) { .career-details-modal{padding:10px}.career-details-panel{padding:26px 20px;border-radius:18px}.career-details-header{display:block;margin-right:30px}.career-details-panel h2{font-size:24px}#job-details-image{width:100%;height:180px;margin-bottom:18px}.career-job-actions{width:100%;justify-content:flex-end;margin-top:14px;gap:14px}.career-job-actions .apply-btn{font-size:18px} }
+
         </style>
   
 </head>
@@ -614,18 +635,34 @@ overflow-y: auto; */
 
         </div>
 
+        <div id="job-details-modal" class="career-details-modal" aria-hidden="true">
+            <div class="career-details-backdrop" data-close-job-details></div>
+            <div class="career-details-panel" role="dialog" aria-modal="true" aria-labelledby="job-details-title">
+                <button type="button" class="career-details-close" data-close-job-details aria-label="Close">&times;</button>
+                <div class="career-details-header"><img id="job-details-image" alt="Job preview"><div><div id="job-details-tags" class="tags"></div><h2 id="job-details-title"></h2></div></div>
+                <div class="career-details-section"><h3>Overview</h3><p id="job-details-overview"></p></div>
+                <div class="career-details-section"><h3>Responsibilities</h3><p id="job-details-responsibilities"></p></div>
+                <div class="career-details-section"><h3>Required Skills</h3><p id="job-details-required"></p></div>
+                <div class="career-details-section"><h3>Preferred Skills</h3><p id="job-details-preferred"></p></div>
+                <div class="career-details-section"><h3>Experience Required</h3><p id="job-details-experience"></p></div>
+            </div>
+        </div>
+
         <div id="apply-modal" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close-button">&times;</span>
                 <h2 id="modal-job-title">Job Title</h2>
                 <p id="modal-job-description">Job Description</p>
-                <form id="apply-form">
+                <div id="career-application-status" aria-live="polite" style="display:none;margin:14px 0;padding:12px 15px;border-radius:8px;font-weight:700"></div>
+                <form id="apply-form" method="POST" action="{{ route('careers.apply') }}" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="career-job-id" name="job_id">
                     <div class="form-row-new-old-first">
                         <div class="form-group-new-old-first">
                             <label for="name">
                                 <i class="fas fa-user"></i> Full Name:
                             </label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="full_name" required>
                         </div>
                         <div class="form-group-new-old-first">
                             <label for="email">
@@ -639,13 +676,13 @@ overflow-y: auto; */
                             <label for="phone">
                                 <i class="fas fa-phone"></i> Phone Number:
                             </label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <input type="tel" id="phone" name="phone_number" required>
                         </div>
                         <div id="linkedinede" class="form-group-new-old-first">
                             <label for="linkedined">
                                 <i class="fab fa-linkedin"></i> LinkedIn Profile:
                             </label>
-                            <input type="url" id="linkedined" name="linkedined">
+                            <input type="url" id="linkedined" name="linkedin_url">
                         </div>
                     </div>
                     <div class="form-row-new-old-first">
@@ -653,13 +690,27 @@ overflow-y: auto; */
                             <label for="github">
                                 <i class="fab fa-github"></i> GitHub Profile:
                             </label>
-                            <input type="url" id="github" name="github">
+                            <input type="url" id="github" name="github_url">
                         </div>
                         <div class="form-group-new-old-first">
                             <label for="portfolio">
                                 <i class="fas fa-briefcase"></i> Portfolio:
                             </label>
-                            <input type="url" id="portfolio" name="portfolio">
+                            <input type="url" id="portfolio" name="portfolio_url">
+                        </div>
+                    </div>
+                    <div class="form-row-new-old-first">
+                        <div class="form-group-new-old-first">
+                            <label for="city">
+                                <i class="fas fa-map-marker-alt"></i> City:
+                            </label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group-new-old-first">
+                            <label for="major-experience">
+                                <i class="fas fa-layer-group"></i> Major Experience:
+                            </label>
+                            <input type="text" id="major-experience" name="major_experience" required>
                         </div>
                     </div>
                     <div class="form-row-new-old-first">
@@ -667,13 +718,13 @@ overflow-y: auto; */
                             <label for="current-ctc">
                                 <i class="fas fa-dollar-sign"></i> Current CTC:
                             </label>
-                            <input type="text" id="current-ctc" name="current-ctc">
+                            <input type="text" id="current-ctc" name="present_salary" required>
                         </div>
                         <div class="form-group-new-old-first">
                             <label for="expected-ctc">
                                 <i class="fas fa-dollar-sign"></i> Expected CTC:
                             </label>
-                            <input type="text" id="expected-ctc" name="expected-ctc">
+                            <input type="text" id="expected-ctc" name="expected_salary" required>
                         </div>
                     </div>
                     <div class="form-row-new-old-first">
@@ -681,13 +732,37 @@ overflow-y: auto; */
                             <label for="experience">
                                 <i class="fas fa-calendar-alt"></i> Experience (in years):
                             </label>
-                            <input type="number" id="experience" name="experience" min="0">
+                            <input type="number" id="experience" name="years_of_experience" min="0" step="0.1" required>
                         </div>
+                        <div class="form-group-new-old-first">
+                            <label for="notice-period">
+                                <i class="fas fa-clock"></i> Notice Period:
+                            </label>
+                            <input type="text" id="notice-period" name="notice_period" required>
+                        </div>
+                    </div>
+                    <div class="form-row-new-old-first">
+                        <div class="form-group-new-old-first full-width">
+                            <label for="current-role">
+                                <i class="fas fa-id-badge"></i> Current Role:
+                            </label>
+                            <input type="text" id="current-role" name="current_role" required>
+                        </div>
+                    </div>
+                    <div class="form-row-new-old-first">
+                        <div class="form-group-new-old-first full-width">
+                            <label for="skills">
+                                <i class="fas fa-tools"></i> Skills:
+                            </label>
+                            <input type="text" id="skills" name="skills" required>
+                        </div>
+                    </div>
+                    <div class="form-row-new-old-first">
                         <div class="form-group-new-old-first full-width">
                             <label for="about-yourself">
                                 <i class="fas fa-user-circle"></i> About Yourself:
                             </label>
-                            <textarea id="about-yourself" name="about-yourself" rows="4"></textarea>
+                            <textarea id="about-yourself" name="ai_challenge" rows="4" required></textarea>
                         </div>
                     </div>
                     <div class="form-row-new-old-first">
@@ -695,7 +770,7 @@ overflow-y: auto; */
                             <label for="resume">
                                 <i class="fas fa-file-upload"></i> Resume:
                             </label>
-                            <input type="file" id="resume" name="resume" required>
+                            <input type="file" id="resume" name="resume" accept="application/pdf,.pdf" required>
                         </div>
                     </div>
                     <button id="submit-form-carrer" type="submit">Submit Application</button>
@@ -1064,7 +1139,7 @@ window.addEventListener('load', function() {
             });
         });
         </script>
-        <script>
+        <script type="text/plain" id="legacy-career-jobs-script">
             const jobs = [
 {
     title: "Product Designer",
@@ -1246,6 +1321,114 @@ displayJobs('all');
 });
 
 
+        </script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const jobs = @json($careerJobsPayload);
+            const listing = document.getElementById('job-listing');
+            const empty = document.getElementById('no-openings');
+            const modal = document.getElementById('apply-modal');
+            const applicationForm = document.getElementById('apply-form');
+            const applicationStatus = document.getElementById('career-application-status');
+            const applicationSubmit = document.getElementById('submit-form-carrer');
+            const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+
+            const render = category => {
+                const filtered = category === 'all' ? jobs : jobs.filter(job => job.category === category);
+                empty.style.display = filtered.length ? 'none' : 'block';
+                listing.innerHTML = filtered.map(job => `
+                    <div class="job">
+                        <div class="job-info"><h3>${escapeHtml(job.title)}</h3><p>${escapeHtml(job.description)}</p>
+                            <div class="tags">${job.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</div>
+                        </div>
+                        <div class="career-job-actions">
+                            <button type="button" class="view-job-btn" data-view-job-id="${job.id}" aria-label="View job details"><i class="fas fa-eye"></i>View Details</button>
+                            <button type="button" class="apply-btn" data-job-id="${job.id}">Apply <span>&rarr;</span></button>
+                        </div>
+                    </div>`).join('');
+            };
+
+            document.querySelectorAll('.filter-btn').forEach(button => button.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(item => item.classList.remove('active'));
+                button.classList.add('active');
+                render(button.dataset.category);
+            }));
+
+            listing.addEventListener('click', event => {
+                const viewButton = event.target.closest('.view-job-btn');
+                if (viewButton) {
+                    const job = jobs.find(item => item.id === Number(viewButton.dataset.viewJobId));
+                    document.getElementById('job-details-title').textContent = job.title;
+                    document.getElementById('job-details-overview').textContent = job.description;
+                    document.getElementById('job-details-tags').innerHTML = job.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
+                    document.getElementById('job-details-responsibilities').textContent = job.responsibilities || '-';
+                    document.getElementById('job-details-required').textContent = job.required_skills || '-';
+                    document.getElementById('job-details-preferred').textContent = job.preferred_skills || '-';
+                    document.getElementById('job-details-experience').textContent = job.experience_required || '-';
+                    const detailsImage = document.getElementById('job-details-image');
+                    if (job.preview_image_url) { detailsImage.src = job.preview_image_url; detailsImage.style.display = 'block'; }
+                    else { detailsImage.removeAttribute('src'); detailsImage.style.display = 'none'; }
+                    const detailsModal = document.getElementById('job-details-modal');
+                    detailsModal.classList.add('is-open'); detailsModal.setAttribute('aria-hidden', 'false');
+                    return;
+                }
+                const button = event.target.closest('.apply-btn');
+                if (!button) return;
+                const job = jobs.find(item => item.id === Number(button.dataset.jobId));
+                document.getElementById('career-job-id').value = job.id;
+                document.getElementById('modal-job-title').textContent = job.title;
+                document.getElementById('modal-job-description').textContent = job.description;
+                modal.style.display = 'flex';
+            });
+            document.querySelector('.close-button').addEventListener('click', () => modal.style.display = 'none');
+            modal.addEventListener('click', event => { if (event.target === modal) modal.style.display = 'none'; });
+            document.querySelectorAll('[data-close-job-details]').forEach(el => el.addEventListener('click', () => {
+                const detailsModal = document.getElementById('job-details-modal');
+                detailsModal.classList.remove('is-open'); detailsModal.setAttribute('aria-hidden', 'true');
+            }));
+            applicationForm.addEventListener('submit', async event => {
+                event.preventDefault();
+                applicationStatus.style.display = 'none';
+                applicationStatus.textContent = '';
+                applicationSubmit.disabled = true;
+                const originalText = applicationSubmit.textContent;
+                applicationSubmit.textContent = 'Submitting...';
+
+                try {
+                    const response = await fetch(applicationForm.action, {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+                        body: new FormData(applicationForm),
+                    });
+                    const data = await response.json();
+                    if (!response.ok) {
+                        const messages = data.errors ? Object.values(data.errors).flat() : [data.message || 'Unable to submit application.'];
+                        throw new Error(messages.join('\n'));
+                    }
+
+                    const selectedJobId = document.getElementById('career-job-id').value;
+                    applicationForm.reset();
+                    document.getElementById('career-job-id').value = selectedJobId;
+                    applicationStatus.style.background = '#ecfdf5';
+                    applicationStatus.style.color = '#15803d';
+                    applicationStatus.style.border = '1px solid #bbf7d0';
+                    applicationStatus.textContent = data.message;
+                    applicationStatus.style.display = 'block';
+                } catch (error) {
+                    applicationStatus.style.whiteSpace = 'pre-line';
+                    applicationStatus.style.background = '#fef2f2';
+                    applicationStatus.style.color = '#dc2626';
+                    applicationStatus.style.border = '1px solid #fecaca';
+                    applicationStatus.textContent = error.message;
+                    applicationStatus.style.display = 'block';
+                } finally {
+                    applicationSubmit.disabled = false;
+                    applicationSubmit.textContent = originalText;
+                    applicationStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+            render('all');
+        });
         </script>
 </body>
 </html>

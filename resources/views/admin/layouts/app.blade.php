@@ -137,7 +137,27 @@
                         <span>Dashboard</span>
                     </a>
                     
-                   
+                   <div class="pr-0.5">
+                        <button type="button"
+                            class="flex w-full items-center gap-3 rounded-lg px-3 py-1.5 font-['Space_Grotesk'] text-sm font-semibold tracking-tight transition-all duration-200 {{ request()->routeIs('admin.career.*') ? 'bg-[#5D5CFF]/10 text-[#5D5CFF]' : 'text-slate-600 hover:bg-[#5D5CFF]/5 hover:text-[#5D5CFF]' }}"
+                            onclick="toggleStaticSubmenu('sub-career')">
+                            <span class="material-symbols-outlined !text-[20px]">work</span>
+                            <span class="flex-1 text-left">Career</span>
+                            <span class="material-symbols-outlined !text-[18px] transition-transform duration-200 {{ request()->routeIs('admin.career.*') ? 'rotate-180' : '' }}" id="chevron-sub-career">expand_more</span>
+                        </button>
+                        <div class="{{ request()->routeIs('admin.career.*') ? 'submenu-open' : 'submenu-hidden' }} mt-0.5 space-y-0 pl-8" id="sub-career">
+                            <a href="{{ route('admin.career.jobs') }}"
+                               class="flex w-full items-center gap-2 whitespace-nowrap px-2 py-1 text-left text-xs transition-colors {{ request()->routeIs('admin.career.jobs') ? 'text-[#5D5CFF]' : 'text-slate-500 hover:text-[#5D5CFF]' }}">
+                                <span class="material-symbols-outlined !text-[15px]">info</span>
+                                <span>Job</span>
+                            </a>
+                            <a href="{{ route('admin.career.applications') }}"
+                               class="flex w-full items-center gap-2 whitespace-nowrap px-2 py-1 text-left text-xs transition-colors {{ request()->routeIs('admin.career.applications') ? 'text-[#5D5CFF]' : 'text-slate-500 hover:text-[#5D5CFF]' }}">
+                                <span class="material-symbols-outlined !text-[15px]">handshake</span>
+                                <span>Application</span>
+                            </a>
+                        </div>
+                    </div>
                     <a href="{{ route('admin.newsletter.index') }}"
                        class="flex w-full items-center gap-3 rounded-lg px-3 py-1.5 font-['Space_Grotesk'] text-sm font-semibold tracking-tight transition-all duration-200 {{ request()->routeIs('admin.newsletter.*') ? 'bg-[#5D5CFF]/10 text-[#5D5CFF]' : 'text-slate-600 hover:bg-[#5D5CFF]/5 hover:text-[#5D5CFF]' }}">
                         <span class="material-symbols-outlined !text-[20px]">mail</span>

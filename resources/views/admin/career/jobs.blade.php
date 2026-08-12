@@ -7,11 +7,11 @@
         <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
                 <h1 class="font-['Space_Grotesk'] text-3xl font-bold tracking-tight text-slate-950">Jobs</h1>
-                <p class="mt-1 text-sm text-slate-500">Manage AI career roles with live search, upload, and server pagination.</p>
+                <p class="mt-1 text-sm text-slate-500">Manage career roles by category.</p>
             </div>
 
             <button type="button"
-                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold uppercase tracking-widest text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0"
+                    class="admin-primary-button inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold uppercase tracking-widest text-white shadow-lg transition"
                     onclick="openJobForm()">
                 <span class="material-symbols-outlined !text-[20px]">add</span>
                 Add Job
@@ -34,8 +34,8 @@
                 <table class="w-full min-w-[980px] text-left">
                     <thead class="border-b border-slate-100 bg-slate-50">
                         <tr>
-                            <th class="px-5 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Preview</th>
                             <th class="px-5 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Job Title</th>
+                            <th class="px-5 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Category</th>
                             <th class="px-5 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Work Location</th>
                             <th class="px-5 py-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Post Date</th>
                             <th class="px-5 py-4 text-right text-[10px] font-bold uppercase tracking-widest text-slate-400">Actions</th>
@@ -82,10 +82,24 @@
                         <span class="field-error" data-error-for="job_title"></span>
                     </label>
                     <label class="space-y-1">
-                        <span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Work Location</span>
-                        <input class="job-input" name="work_location" type="text" required placeholder="Remote, New York, etc.">
-                        <span class="field-error" data-error-for="work_location"></span>
+                        <span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Category</span>
+                        <select class="job-input" name="category" required>
+                            <option value="development">Development</option><option value="design">Design</option>
+                            <option value="marketing">Marketing</option><option value="customer-service">Customer Service</option>
+                            <option value="operations">Operations</option><option value="finance">Finance</option>
+                            <option value="management">Management</option>
+                        </select>
+                        <span class="field-error" data-error-for="category"></span>
                     </label>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+                    <label class="space-y-1"><span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Work Mode</span>
+                        <select class="job-input" name="work_mode" required><option>100% Remote</option><option>Hybrid</option><option>On-site</option></select></label>
+                    <label class="space-y-1"><span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Location (optional)</span>
+                        <input class="job-input" name="work_location" type="text" placeholder="Kolkata, India"></label>
+                    <label class="space-y-1"><span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Employment Type</span>
+                        <select class="job-input" name="employment_type" required><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Internship</option></select></label>
                 </div>
 
                 <label class="space-y-1 block">
@@ -121,17 +135,17 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-[1fr_160px] md:items-end">
-                    <label class="space-y-1">
-                        <span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Preview Image</span>
-                        <input class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-primary/10 file:px-4 file:py-2 file:text-xs file:font-bold file:text-primary hover:file:bg-primary/20" name="preview_image" type="file" accept="image/png,image/jpeg,image/jpg,image/webp,image/gif">
+                    <label class="space-y-1"><span class="ml-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Preview Image</span>
+                        <input name="preview_image" type="file" accept="image/png,image/jpeg,image/webp" class="job-input">
                         <span class="field-error" data-error-for="preview_image"></span>
                     </label>
                     <img id="job-image-preview" class="hidden h-28 w-full rounded-xl border border-slate-200 object-cover" alt="Preview image">
-                    </div>
+                </div>
+
                 </div>
 
                 <div class="shrink-0 border-t border-slate-100 bg-white px-5 py-4 sm:px-8">
-                    <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-xl shadow-primary/20 transition hover:-translate-y-0.5 hover:shadow-2xl active:translate-y-0" id="job-save-button">
+                    <button type="submit" class="admin-primary-button flex w-full items-center justify-center gap-2 rounded-xl px-5 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-xl transition" id="job-save-button">
                         <span class="material-symbols-outlined !text-[20px]">save</span>
                         Save Job
                     </button>
@@ -166,6 +180,8 @@
             justify-content: center;
             padding: 1rem;
         }
+        .admin-primary-button { background:#5D5CFF !important; color:#fff !important; }
+        .admin-primary-button:hover { background:#4746e8 !important; }
 
         .job-modal-overlay.is-open {
             display: flex;
@@ -301,13 +317,9 @@
                 tableBody.innerHTML = jobs.map((job) => `
                     <tr class="transition hover:bg-slate-50/80">
                         <td class="px-5 py-4">
-                            ${job.preview_image_url
-                                ? `<img src="${job.preview_image_url}" loading="lazy" alt="${escapeHtml(job.job_title)}" class="h-14 w-20 rounded-xl border border-slate-100 object-cover">`
-                                : '<div class="flex h-14 w-20 items-center justify-center rounded-xl border border-dashed border-slate-200 text-slate-300"><span class="material-symbols-outlined">image</span></div>'}
-                        </td>
-                        <td class="px-5 py-4">
                             <p class="font-semibold text-slate-900">${escapeHtml(job.job_title)}</p>
                         </td>
+                        <td class="px-5 py-4 text-sm text-slate-600">${escapeHtml(job.category_label)}</td>
                         <td class="px-5 py-4 text-sm text-slate-600"> ${escapeHtml(job.work_location || '-')}</td>
                         <td class="px-5 py-4">
                             <p class="text-sm font-semibold text-slate-800">${escapeHtml(job.job_post_date_readable)}</p>
@@ -383,8 +395,7 @@
                 updateOverviewWordCount();
                 document.getElementById('job-id').value = '';
                 document.getElementById('job-form-title').textContent = 'Add Job';
-                imagePreview.classList.add('hidden');
-                imagePreview.removeAttribute('src');
+                imagePreview.classList.add('hidden'); imagePreview.removeAttribute('src');
                 openModal('job-form-modal');
             };
 
@@ -406,11 +417,12 @@
                 try {
                     const { data: job } = await requestJson(routeFor('show', id));
                     content.innerHTML = `
-                        ${job.preview_image_url ? `<img src="${job.preview_image_url}" loading="lazy" alt="${escapeHtml(job.job_title)}" class="max-h-80 w-full rounded-2xl border border-slate-100 object-cover">` : ''}
+                        ${job.preview_image_url ? `<img src="${job.preview_image_url}" alt="${escapeHtml(job.job_title)}" class="max-h-72 w-full rounded-2xl object-cover">` : ''}
                         <div class="rounded-2xl border border-slate-100 bg-slate-50 p-5">
                             <p class="text-[10px] font-bold uppercase tracking-widest text-primary">#${job.id}</p>
                             <h3 class="mt-1 font-['Space_Grotesk'] text-2xl font-bold text-slate-950">${escapeHtml(job.job_title)}</h3>
                             <p class="mt-2 text-sm font-semibold text-slate-600">${escapeHtml(job.work_location || '-')}</p>
+                            <p class="mt-1 text-sm text-slate-500">${escapeHtml(job.category_label)} · ${escapeHtml(job.work_mode)} · ${escapeHtml(job.employment_type)}</p>
                         </div>
                         ${detailBlock('Overview', job.overview)}
                          ${detailBlock('Responsibilities', job.responsibilities)}
@@ -433,31 +445,30 @@
                 form.reset();
                 document.getElementById('job-id').value = id;
                 document.getElementById('job-form-title').textContent = 'Edit Job';
-                imagePreview.classList.add('hidden');
-                imagePreview.removeAttribute('src');
+                imagePreview.classList.add('hidden'); imagePreview.removeAttribute('src');
                 openModal('job-form-modal');
 
                 try {
                     const { data: job } = await requestJson(routeFor('show', id));
                     form.elements.job_title.value = job.job_title || '';
+                    form.elements.category.value = job.category || 'development';
+                    form.elements.work_mode.value = job.work_mode || '100% Remote';
                     form.elements.work_location.value = job.work_location || '';
+                    form.elements.employment_type.value = job.employment_type || 'Full-time';
                     form.elements.overview.value = job.overview || '';
                     updateOverviewWordCount();
                     form.elements.responsibilities.value = job.responsibilities || '';
                     form.elements.required_skills.value = job.required_skills || '';
                     form.elements.preferred_skills.value = job.preferred_skills || '';
                     form.elements.experience_required.value = job.experience_required || '';
-                    if (job.preview_image_url) {
-                        imagePreview.src = job.preview_image_url;
-                        imagePreview.classList.remove('hidden');
-                    }
+                    if (job.preview_image_url) { imagePreview.src = job.preview_image_url; imagePreview.classList.remove('hidden'); }
                 } catch (error) {
                     showFormError(error.message || 'Unable to load job for edit.');
                 }
             };
 
             window.deleteJob = async (id) => {
-                if (!confirm('Delete this job? This will also delete its preview image.')) {
+                if (!confirm('Delete this job?')) {
                     return;
                 }
 
@@ -501,20 +512,9 @@
                 }
             });
 
-            form.elements.preview_image.addEventListener('change', (event) => {
+            form.elements.preview_image.addEventListener('change', event => {
                 const file = event.target.files[0];
-                if (!file) {
-                    return;
-                }
-
-                if (!file.type.startsWith('image/')) {
-                    event.target.value = '';
-                    imagePreview.classList.add('hidden');
-                    imagePreview.removeAttribute('src');
-                    renderFieldErrors({ preview_image: ['Only image files are allowed.'] });
-                    return;
-                }
-
+                if (!file) return;
                 imagePreview.src = URL.createObjectURL(file);
                 imagePreview.classList.remove('hidden');
             });

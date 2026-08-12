@@ -28,7 +28,10 @@ class AiJobController extends Controller
             ->select([
                 'id',
                 'job_title',
+                'category',
+                'work_mode',
                 'work_location',
+                'employment_type',
                 'job_post_date',
                 'preview_image',
                 'created_at',
@@ -74,8 +77,7 @@ class AiJobController extends Controller
 
         try {
             $path = $this->storePreviewImage($request);
-
-            $job = AiJob::create($this->jobPayload($validated, $path, (int) date('U')));
+            $job = AiJob::create($this->jobPayload($validated, (int) date('U'), $path));
 
             return response()->json([
                 'status' => 'success',
@@ -83,10 +85,7 @@ class AiJobController extends Controller
                 'data' => $this->formatJob($job->fresh()),
             ]);
         } catch (\Throwable $exception) {
-            if (isset($path) && $path) {
-                Storage::disk('public')->delete($path);
-            }
-
+            if (! empty($path)) Storage::disk('public')->delete($path);
             Log::error('Admin job save failed', ['exception' => $exception]);
             $this->errorLog->record($exception, 'Admin job save failed');
 
@@ -113,30 +112,14 @@ class AiJobController extends Controller
         }
 
         $validated = $validator->validated();
-        $oldImage = $aiJob->preview_image;
         $newImage = null;
-
         try {
-            DB::beginTransaction();
-
             if ($request->hasFile('preview_image')) {
                 $newImage = $this->storePreviewImage($request);
-
-                if ($oldImage && ! Storage::disk('public')->delete($oldImage)) {
-                    Storage::disk('public')->delete($newImage);
-                    DB::rollBack();
-
-                    return response()->json([
-                        'status' => 'error',
-                        'message' => 'Unable to replace old preview image.',
-                        'errors' => [],
-                    ], 500);
-                }
             }
-
-            $aiJob->update($this->jobPayload($validated, $newImage ?? $oldImage, $aiJob->job_post_date));
-
-            DB::commit();
+            $oldImage = $aiJob->preview_image;
+            $aiJob->update($this->jobPayload($validated, $aiJob->job_post_date, $newImage ?: $oldImage));
+            if ($newImage && $oldImage) Storage::disk('public')->delete($oldImage);
 
             return response()->json([
                 'status' => 'success',
@@ -144,12 +127,7 @@ class AiJobController extends Controller
                 'data' => $this->formatJob($aiJob->fresh()),
             ]);
         } catch (\Throwable $exception) {
-            DB::rollBack();
-
-            if ($newImage) {
-                Storage::disk('public')->delete($newImage);
-            }
-
+            if ($newImage) Storage::disk('public')->delete($newImage);
             Log::error('Admin job update failed', ['exception' => $exception]);
             $this->errorLog->record($exception, 'Admin job update failed');
 
@@ -160,21 +138,8 @@ class AiJobController extends Controller
     public function destroy(AiJob $aiJob): JsonResponse
     {
         try {
-            DB::beginTransaction();
-
-            if ($aiJob->preview_image && ! Storage::disk('public')->delete($aiJob->preview_image)) {
-                DB::rollBack();
-
-                return response()->json([
-                    'status' => 'error',
-                    'message' => 'Unable to delete preview image. Job was not deleted.',
-                    'errors' => [],
-                ], 500);
-            }
-
+            if ($aiJob->preview_image) Storage::disk('public')->delete($aiJob->preview_image);
             $aiJob->delete();
-
-            DB::commit();
 
             return response()->json([
                 'status' => 'success',
@@ -182,8 +147,6 @@ class AiJobController extends Controller
                 'data' => [],
             ]);
         } catch (\Throwable $exception) {
-            DB::rollBack();
-
             Log::error('Admin job delete failed', ['exception' => $exception]);
             $this->errorLog->record($exception, 'Admin job delete failed');
 
@@ -195,21 +158,29 @@ class AiJobController extends Controller
     {
         return [
             'job_title' => ['required', 'string', 'max:255'],
-            'work_location' => ['required', 'string', 'max:255'],
+            'category' => ['required', 'in:development,design,marketing,customer-service,operations,finance,management'],
+            'work_mode' => ['required', 'in:100% Remote,Hybrid,On-site'],
+            'work_location' => ['nullable', 'string', 'max:255'],
+            'employment_type' => ['required', 'in:Full-time,Part-time,Contract,Internship'],
             'overview' => ['required', 'string'],
             'responsibilities' => ['required', 'string'],
             'required_skills' => ['required', 'string'],
             'preferred_skills' => ['required', 'string'],
             'experience_required' => ['required', 'string', 'max:255'],
-            'preview_image' => [$creating ? 'required' : 'nullable', 'image', 'mimes:jpg,jpeg,png,webp,gif', 'max:5120'],
+            'preview_image' => [$creating ? 'required' : 'nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:5120'],
         ];
     }
 
-    private function jobPayload(array $validated, ?string $previewImage, int $jobPostDate): array
+    private function jobPayload(array $validated, int $jobPostDate, ?string $previewImage): array
     {
         return [
             'job_title' => $validated['job_title'],
-            'work_location' => $validated['work_location'],
+            'category' => $validated['category'],
+            'work_mode' => $validated['work_mode'],
+            'work_location' => filled($validated['work_location'] ?? null)
+                ? trim($validated['work_location'])
+                : $validated['work_mode'],
+            'employment_type' => $validated['employment_type'],
             'overview' => $validated['overview'],
             'responsibilities' => $validated['responsibilities'],
             'required_skills' => $validated['required_skills'],
@@ -222,15 +193,13 @@ class AiJobController extends Controller
 
     private function storePreviewImage(Request $request): ?string
     {
-        if (! $request->hasFile('preview_image')) {
-            return null;
-        }
-
+        if (! $request->hasFile('preview_image')) return null;
         $file = $request->file('preview_image');
-        $directory = 'jobs/'.now()->format('Y').'/'.now()->format('m');
-        $filename = (string) Str::uuid().'.'.$file->getClientOriginalExtension();
-
-        return Storage::disk('public')->putFileAs($directory, $file, $filename);
+        return Storage::disk('public')->putFileAs(
+            'jobs/'.now()->format('Y/m'),
+            $file,
+            Str::uuid().'.'.$file->getClientOriginalExtension()
+        );
     }
 
     private function validateOverviewWordLimit(ValidationValidator $validator): void
@@ -250,7 +219,11 @@ class AiJobController extends Controller
         return [
             'id' => $job->id,
             'job_title' => $job->job_title,
+            'category' => $job->category,
+            'category_label' => str($job->category)->replace('-', ' ')->title()->toString(),
+            'work_mode' => $job->work_mode,
             'work_location' => $job->work_location,
+            'employment_type' => $job->employment_type,
             'overview' => $job->overview,
             'responsibilities' => $job->responsibilities,
             'required_skills' => $job->required_skills,
@@ -258,7 +231,6 @@ class AiJobController extends Controller
             'experience_required' => $job->experience_required,
             'job_post_date' => $job->job_post_date,
             'job_post_date_readable' => date('M d, Y', (int) $job->job_post_date),
-            'preview_image' => $job->preview_image ? 'storage/'.$job->preview_image : null,
             'preview_image_url' => $job->preview_image ? asset('storage/'.$job->preview_image) : null,
             'created_at' => optional($job->created_at)->toDateTimeString(),
             'updated_at' => optional($job->updated_at)->toDateTimeString(),

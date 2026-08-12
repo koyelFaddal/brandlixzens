@@ -204,7 +204,10 @@ class JobApplicationController extends Controller
         return [
             ...$data,
             'portfolio_url' => $application->portfolio_url,
+            'linkedin_url' => $application->linkedin_url,
+            'github_url' => $application->github_url,
             'years_of_experience' => $application->years_of_experience,
+            'expected_salary' => $application->expected_salary,
             'current_role' => $application->current_role,
             'skills' => $application->skills,
             'ai_challenge' => $application->ai_challenge,

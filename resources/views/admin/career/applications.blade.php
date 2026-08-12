@@ -126,7 +126,10 @@
                                     <td class="px-5 py-4">
                                         <div class="flex justify-end gap-2">
                                             <button type="button" class="application-action-button" title="View" onclick="viewApplication({{ $application->id }})"><span class="material-symbols-outlined !text-[20px]">visibility</span></button>
-                                            <button type="button" class="application-action-button text-red-500 hover:bg-red-50 hover:text-red-600" title="Delete" onclick="deleteApplication({{ $application->id }})"><span class="material-symbols-outlined !text-[20px]">delete</span></button>
+                                            <!-- @if ($application->resume_file_path)
+                                                <a href="{{ route('admin.career.applications.resume', $application) }}" class="application-action-button" title="Download PDF / CV"><span class="material-symbols-outlined !text-[20px]">download</span></a>
+                                            @endif -->
+                                            <button type="button" class="application-action-button application-delete-button text-red-500" title="Delete" onclick="deleteApplication({{ $application->id }})"><span class="material-symbols-outlined !text-[20px]">delete</span></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -149,7 +152,10 @@
                                 </div>
                                 <div class="flex shrink-0 items-center gap-2">
                                     <button type="button" class="application-action-button" title="View" onclick="viewApplication({{ $application->id }})"><span class="material-symbols-outlined !text-[20px]">visibility</span></button>
-                                    <button type="button" class="application-action-button text-red-500 hover:bg-red-50 hover:text-red-600" title="Delete" onclick="deleteApplication({{ $application->id }})"><span class="material-symbols-outlined !text-[20px]">delete</span></button>
+                                    @if ($application->resume_file_path)
+                                        <a href="{{ route('admin.career.applications.resume', $application) }}" class="application-action-button" title="Download PDF / CV"><span class="material-symbols-outlined !text-[20px]">download</span></a>
+                                    @endif
+                                    <button type="button" class="application-action-button application-delete-button text-red-500" title="Delete" onclick="deleteApplication({{ $application->id }})"><span class="material-symbols-outlined !text-[20px]">delete</span></button>
                                     <input type="checkbox"
                                            name="applications[]"
                                            value="{{ $application->id }}"
@@ -257,6 +263,8 @@
             background: rgba(93, 92, 255, .08);
             color: #5D5CFF;
         }
+
+      
     </style>
 
     @php
@@ -394,15 +402,19 @@
                             ${detailCard('Years of Experience', application.years_of_experience || '-')}
                             ${detailCard('Present Salary', application.present_salary || '-')}
                             ${detailCard('Notice Period', application.notice_period || '-')}
-                            ${detailCard(isFuture ? 'LinkedIn Profile' : 'Portfolio / LinkedIn', application.portfolio_url || '-')}
+                            ${detailCard('LinkedIn Profile', application.linkedin_url || '-')}
+                            ${detailCard('GitHub Profile', application.github_url || '-')}
+                            ${detailCard('Portfolio', application.portfolio_url || '-')}
+                            ${detailCard('Expected CTC', application.expected_salary || '-')}
                         </div>
-                        ${isFuture ? detailBlock('Current Role / Position', application.current_role) : ''}
-                        ${isFuture ? detailBlock('Skills / Expertise', application.skills) : detailBlock('Cover Letter / AI Challenge', application.ai_challenge)}
+                        ${detailBlock('Current Role', application.current_role || '-')}
+                        ${detailBlock('Skills', application.skills || '-')}
+                        ${detailBlock('About Yourself', application.ai_challenge || '-')}
                         <div class="rounded-2xl border border-slate-100 bg-white p-5">
                             <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Resume</p>
                             <div class="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                                 <p class="text-sm font-semibold text-slate-800">${escapeHtml(application.resume_file_name || '-')}</p>
-                                ${application.has_resume ? `<a class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:bg-primary/90" href="${escapeHtml(application.resume_url)}"><span class="material-symbols-outlined !text-[18px]">download</span> Download</a>` : '<span class="text-sm text-red-500">Resume file missing</span>'}
+                                ${application.has_resume ? `<a style="display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;background:#5b55f7;padding:12px 18px;color:#fff;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;text-decoration:none" href="${escapeHtml(application.resume_url)}"><span class="material-symbols-outlined" style="font-size:18px">download</span> Download PDF / CV</a>` : '<span class="text-sm text-red-500">Resume file missing</span>'}
                             </div>
                         </div>
                     `;
