@@ -267,6 +267,11 @@ height: 200px;
     .certification-row img {
         /* max-width: 100px; */
     }
+    .new-text-para{
+        font-size: 22px !important;
+        width: 91% !important;
+        margin-left: -5% !important;
+    }
 }
 
 .container-main-heaer-para-p {

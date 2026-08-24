@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../nav2.css">
     <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
-    <link rel="stylesheet" href="../style/seo.css">
+    <link rel="stylesheet" href="../style/seo.css?v=1">
     <script src="../script/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -402,7 +402,7 @@ overflow-y: auto; */
             <div class="cta-section">
                 <h2 id="new-name-page-h2">Thank you for your Interest in BrandIxZen</h2>
                 <p id="new-name-page-peee">We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.</p>
-                <button class="cta-button">Start Project</button>
+                <button class="cta-button" type="button" data-action="quote-request">Start Project</button>
             </div>
     <div id="footer-placeholder"></div>
 

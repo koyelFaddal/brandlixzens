@@ -209,7 +209,7 @@
         <li><a href="#">Governing Board</a></li>
         <li><a href="#">Group Businesses</a></li>
         <li><a href="#">In Media</a></li>
-        <li><a href="/about-us/brandixzen-CSR">Our CRS</a></li>
+        <!-- <li><a href="/about-us/brandixzen-CSR">Our CRS</a></li> -->
         <!-- <li><a href="#">Our Social Responsibilities</a></li> -->
         <li><a href="/about-us/contact-us">Contact Us</a></li>
         </ul>

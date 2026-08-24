@@ -7,7 +7,7 @@
     <title>BrandIxZen</title>
     <link rel="icon" href="./picture/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style/footer.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=1.1">
     <link rel="stylesheet" href="./nav2.css">
     <!-- <link rel="stylesheet" href="./style1.css"> -->
     <script src="./script/script.js"></script>
@@ -738,7 +738,7 @@ body{
                                 service designed to cover every aspect of your online presence. Our holistic approach
                                 ensures that all your digital marketing efforts are integrated and aligned to achieve
                                 maximum impact and drive sustainable growth.</p>
-                                <button id="new-read-more" data-url="/optimization/seo">Read More</button>
+                                <!-- <button id="new-read-more" data-url="/optimization/seo">Read More</button> -->
 
                         </div>
                         <div class="options">
@@ -778,7 +778,7 @@ body{
                                     data-url="amazon-services.html"
                                     data-image="./picture/Home- Amazon.png">AMAZON SERVICES</li>
                             </ul>
-                            <button id="new-read-more-new" data-url="all-services.html">Know all Our Services</button>
+                            <!-- <button id="new-read-more-new" data-url="all-services.html">Know all Our Services</button> -->
                         </div>
                     </div>
                     
@@ -1341,7 +1341,7 @@ body{
             <li><a href="#">Governing Board</a></li>
             <li><a href="#">Group Businesses</a></li>
             <li><a href="#">In Media</a></li>
-            <li><a href="/about-us/brandixzen-CSR">Our CRS</a></li>
+            <!-- <li><a href="/about-us/brandixzen-CSR">Our CRS</a></li> -->
             <!-- <li><a href="#">Our Social Responsibilities</a></li> -->
             <li><a href="/about-us/contact-us">Contact Us</a></li>
             </ul>

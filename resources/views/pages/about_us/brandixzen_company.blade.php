@@ -9,11 +9,11 @@
         Expert in Search Engine Optimization, Digital Marketing & Online Branding.">
     <link rel="stylesheet" href="../style/footer.css">
     <script src="../footerTemplate/sr.js"></script>
-    <link rel="stylesheet" href="../style/aboutus.css">
+    <link rel="stylesheet" href="../style/aboutus.css?v=1.2">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../nav2.css">
     <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
-    <link rel="stylesheet" href="../style/seo.css">
+    <link rel="stylesheet" href="../style/seo.css?v=1">
     <script src="../script/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
@@ -273,6 +273,21 @@ overflow-y: auto; */
     /* margin-bottom: 40px; */
 }
 
+}
+
+@media (max-width: 768px) {
+    .certification-row {
+        padding-left: 26%;
+        gap: 95px;
+    }
+    .image-newd2c {
+        height: 40vh;
+    }
+}
+@media (max-width: 390px) {
+    .certification-row {
+        padding-left: 23%;
+    }
 }
 
     </style>
@@ -638,7 +653,7 @@ goals. At <span style="color: red;">BrandIxZen</span> , your success is our miss
                     <div class="contact-icon"></div>
                     <h3>Do you have more questions?</h3>
                     <p>End-to-end payments and financial management in a single solution. Meet the right platform to help realize.</p>
-                    <button id="shoot-email">Shoot a Direct Mail</button>
+                    <button id="shoot-email" type="button" data-action="newsletter">Shoot a Direct Mail</button>
                 </div>
             </div>
         </div>

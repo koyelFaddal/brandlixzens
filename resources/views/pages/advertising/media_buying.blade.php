@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../nav2.css">
     <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
-    <link rel="stylesheet" href="../style/seo.css">
+    <link rel="stylesheet" href="../style/seo.css?v=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
