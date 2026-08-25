@@ -1,5 +1,6 @@
 @font-face {
   font-family: "Century Schoolbook";
+  font-display: swap;
   src: url("https://db.onlinewebfonts.com/t/47da73e52c097234e8cc607631ddc910.eot");
   src: url("https://db.onlinewebfonts.com/t/47da73e52c097234e8cc607631ddc910.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/47da73e52c097234e8cc607631ddc910.woff2")format("woff2"),
@@ -10,6 +11,7 @@
 
 @font-face {
   font-family: "Calgary-Bold";
+  font-display: swap;
   src: url("https://db.onlinewebfonts.com/t/588fcee6c123a1020000e007f461dba2.eot");
   src: url("https://db.onlinewebfonts.com/t/588fcee6c123a1020000e007f461dba2.eot?#iefix")format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/588fcee6c123a1020000e007f461dba2.woff2")format("woff2"),
@@ -33,6 +35,12 @@ html {
   /* background-color: rgb(205, 198, 198); */
 
   /* background: linear-gradient(135deg, rgb(1, 5, 64) 0%, rgb(51, 7, 83) 50%); */
+}
+
+/* Skip layout and paint work for sections until they approach the viewport. */
+.defer-offscreen {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 #heading-our-meth {
@@ -273,6 +281,20 @@ header {
   display: block;
 }
 
+/* Reserve the exact desktop image boxes before lazy images arrive, preventing CLS. */
+@media only screen and (min-width: 769px) {
+  #main-container-option .image-container > img:first-child {
+    aspect-ratio: 1440 / 926;
+    height: auto;
+  }
+
+  #red-line {
+    aspect-ratio: 1907 / 292;
+    height: 90px;
+    object-fit: cover;
+  }
+}
+
 .text-overlay,
 .button-overlay {
   position: absolute;
@@ -463,14 +485,19 @@ header {
 }
 
 #read-more-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   height: 50px;
   width: 200px;
-  border: 1px solid red;
-  background-color: red;
+  border: 1px solid #b00020;
+  background-color: #b00020;
   color: white;
   font-size: 15px;
   border-radius: 45.813px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 #read-more-new a {
@@ -488,8 +515,19 @@ header {
 #read-more-new:hover,
 #read-more-new:hover a {
   background-color: white;
-  color: red;
+  color: #b00020;
   cursor: pointer;
+}
+
+#picture-logo-container-get-industry p {
+  color: #111;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.button-overlay button,
+#seo-icon-container .newsletter-input-row .email-button {
+  color: #b00020;
 }
 
 
@@ -1549,7 +1587,7 @@ label {
   border: 0;
   border-radius: 60px;
   background: white;
-  color: red;
+  color: #b00020;
   cursor: pointer;
 }
 
@@ -2223,7 +2261,7 @@ label {
 @media only screen and (max-width: 768px) {
   .image-container {
     margin-top: -5%;
-    background-image: url("./picture/network.jpg");
+    background-image: url("./picture/network-mobile.webp");
     background-size: cover;
     /* Ensure the image covers the container */
     background-position: center;
@@ -2249,6 +2287,7 @@ label {
 
   .image-container img {
     height: 70vh;
+    object-fit: cover;
   }
 
   #main-container-option {
@@ -2675,7 +2714,7 @@ html {
 
 
   .bellow-container-methologo-container-mobile {
-    background-image: url("./picture/Untitled design.png");
+    background-image: url("./picture/methodology-background.webp");
     display: flex;
     background-size: cover;
     background-position: center;
@@ -3151,7 +3190,7 @@ section {
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
-  background-image: url("./picture/Untitled design.png");
+  background-image: url("./picture/methodology-background.webp");
   background-size: cover;
   /* Ensures background image covers the entire section */
   background-position: center;

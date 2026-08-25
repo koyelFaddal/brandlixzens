@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrandIxZen</title>
+    <meta name="description" content="BrandIxZen delivers AI-powered digital marketing, SEO, advertising, branding and web development solutions for sustainable business growth.">
     <link rel="icon" href="./picture/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style/footer.css">
-    <link rel="stylesheet" href="./style.css?v=1.1">
+    <link rel="preload" as="image" href="./picture/home-hero.webp" fetchpriority="high">
+    <link rel="stylesheet" href="./style/footer.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="./style/footer.css"></noscript>
+    <link rel="stylesheet" href="./style.css?v=1.5.5">
     <link rel="stylesheet" href="./nav2.css">
     <!-- <link rel="stylesheet" href="./style1.css"> -->
-    <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <script src="./script/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    </noscript>
     <!-- <link rel="stylesheet" href="./style/seo.css"> -->
  
     <style>
@@ -236,9 +243,9 @@ body{
     <div id="main-container-mobile-view">
         <div class="mobile-nav">
             <div class="logo">
-                <img src="./picture/Logo.png" alt="Logo">
+                <img src="./picture/Logo.png" alt="BrandIxZen" loading="eager" decoding="async">
             </div>
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" onclick="toggleMenu()" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); toggleMenu(); }" role="button" tabindex="0" aria-label="Open navigation menu" aria-controls="menu">
                 <span id="menu-logo-new" style="font-size: 8px;">MENU</span>
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -247,11 +254,11 @@ body{
                 <button type="button">Quote Request</button>
             </div>
             <div class="whatsapp-icon" data-action="whatsapp">
-                <img src="./picture/image23096.png" alt="WhatsApp">
+                <img src="./picture/image23096-2x.webp" alt="Contact BrandIxZen on WhatsApp" width="48" height="54" loading="eager" decoding="async">
             </div>
         </div>
         <div class="background-gif">
-            <img id="background-image" src="./picture/plant-2551467_1920.jpg" alt="Background Image">
+            <img id="background-image" src="./picture/home-hero.webp" alt="BrandIxZen growth and digital marketing" width="1600" height="1067" fetchpriority="high" loading="eager" decoding="async">
             <div class="very-new-navbartext-overlay">
                 <h1>Growth is Life</h1>
                 <p id="bellow-h1-new-navbar"> Make <span style="color: #ff0000;">BRANDIXZEN</span> Your Growth Partner
@@ -358,7 +365,7 @@ body{
                 <ul class="dropdown-content">
                     <div class="list1">
                         <div id="massage-chairs">
-                            <p><a href="/design-development/website-design-development"></a>Web Design and Development</p>
+                            <p><a href="/design-development/website-design-development">Web Design and Development</a></p>
                             <p><a href="/design-development/logo-designing">Logo Design</a></p>
                             <p><a href="/design-development/landing-page-creation">Landing Page Creation</a></p>
                             <p><a href="/design-development/ecommerce-development">E-Commerce Development</a></p>
@@ -374,7 +381,7 @@ body{
                     <div class="list1">
                         <div id="massage-chairs">
                             <p><a href="/branding/online-reputation-management">Online Reputation Management</a></p>
-                            <p><a href="/branding/influencer-marketing"></a>Influencers Marketing</p>
+                            <p><a href="/branding/influencer-marketing">Influencers Marketing</a></p>
                             <p><a href="/branding/online-reviews-management">Online Reviews Management</a></p>
                             <p><a href="#">Digital PR</a></p>
                             <p><a href="/branding/wikipedia-optimization">Wikipedia Optimization</a></p>
@@ -406,7 +413,7 @@ body{
         <div id="navbar-maincontainer">
             <nav id="navbar">
                 <div id="logo">
-                    <img src="./picture/Logo.png" alt="Logo">
+                    <img src="./picture/Logo.png" alt="BrandIxZen" loading="eager" decoding="async">
                 </div>
     
                 <ul id="nav-links">
@@ -429,7 +436,7 @@ body{
         <hr id="hrline">
 
         <div class="background-gif">
-            <img id="background-image" src="./picture/plant-2551467_1920.jpg" alt="Background Image">
+            <img id="background-image" src="./picture/home-hero.webp" alt="BrandIxZen growth and digital marketing" width="1600" height="1067" fetchpriority="high" loading="eager" decoding="async">
         </div>
 
 
@@ -729,7 +736,7 @@ body{
             <div class="new-container">
 
                 <div class="image-container">
-                    <img src="./picture/rect31991 - Copy.png" alt="Yellow Background Image">
+                    <img src="./picture/rect31991-home.webp" alt="AI-powered composite digital marketing services" width="1440" height="926" decoding="async">
 
                     <div class="new-content">
                         <div class="text-content">
@@ -746,7 +753,7 @@ body{
                                 <li class="active" data-title="AI-Powered Composite Digital Marketing"
                                     data-description="At BrandIxZen, we offer an AI-powered comprehensive 360-degree digital marketing service designed to cover every aspect of your online presence. Our holistic approach ensures that all your digital marketing efforts are integrated and aligned to achieve maximum impact and drive sustainable growth."
                                     data-url="composite-digital-marketing.html"
-                                    data-image="./picture/rect31991 - Copy.png">COMPOSITE DIGITAL MARKETING</li>
+                                    data-image="./picture/rect31991-home.webp">COMPOSITE DIGITAL MARKETING</li>
                     
                                 <li id="composite-marketing" data-title="Search Engine Optimization"
                                     data-description="Increase your website's visibility with BrandIxZen's AI-powered SEO services. Our expert team uses proven methods to optimize your site, improving search engine rankings and engagement. Boost your online presence with our tailored SEO solutions. We focus on driving measurable results that align with your business goals."
@@ -786,7 +793,7 @@ body{
             </div>
         </div>
         <div id="red-container">
-            <img id="red-line" src="./picture/rect32225.png" alt="">
+            <img id="red-line" src="./picture/rect32225.png" alt="" width="1907" height="292" decoding="async">
             <div class="text-overlay">Ready For Your Growth?</div>
             <div class="button-overlay">
                 <button>CONNECT NOW</button>
@@ -798,7 +805,7 @@ body{
         <button class="mobile-heading-only-moble-connect-button">Connect Now</button>
     </div>
 
-    <div id="main-center-div-our-metho">
+    <div id="main-center-div-our-metho" class="defer-offscreen">
         <div class="flow-chart-container">
             <h1 class="heading-containe-new-methor">OUR METHODOLOGY</h1>
             <div class="flow-chart">
@@ -829,7 +836,7 @@ body{
         </div>
     </div>
 
-    <div class="bellow-container-methologo-container-mobile">
+    <div class="bellow-container-methologo-container-mobile defer-offscreen">
         <h1 class="heading-containe-new-methor">OUR METHODOLOGY</h1>
         <div class="bellow-container-methologo-container-item-mobile" id="bellow-container-methologo-container-item-mobile-1">
             <div class="bellow-container-methologo-number-mobile" id="num-mobile-1">01</div>
@@ -876,7 +883,7 @@ body{
     </div>
    
 
-    <div class="mobile-mnew-view-container">
+    <div class="mobile-mnew-view-container defer-offscreen">
         <h1 id="hiheading-text-blue-container">YOUR INDUSTRY OUR EXPERTISE</h1>
         <div class="description-mnew-view-container"> At BrandIxZen, we pride ourselves on delivering tailored digital marketing solutions that resonate
             with the unique needs of each industry we serve. We understand that no two businesses are alike and we
@@ -885,24 +892,24 @@ body{
             <!-- <div class="scrolling-text-mnew-view-containernew"> -->
                 <!-- <div class="sidebar white"> -->
                     <div class="image-wrapper-new-sectt">
-                        <img src="./picture/SEM.png" alt="">
-                        <img src="./picture/G.png" alt="">
-                        <img src="./picture/L.png" alt="">
-                        <img src="./picture/I.png" alt="">
-                        <img src="./picture/Wh.png" alt="">
-                        <img src="./picture/Y.png" alt="">
-                        <img src="./picture/images (1).jpg" alt="">
-                        <img src="./picture/F.png" alt="">
-                        <img src="./picture/T.png" alt="">
-                        <img src="./picture/SEM.png" alt="">
-                        <img src="./picture/G.png" alt="">
-                        <img src="./picture/L.png" alt="">
-                        <img src="./picture/I.png" alt="">
-                        <img src="./picture/Wh.png" alt="">
-                        <img src="./picture/Y.png" alt="">
-                        <img src="./picture/images (1).jpg" alt="">
-                        <img src="./picture/F.png" alt="">
-                        <img src="./picture/T.png" alt="">
+                        <img src="./picture/SEM.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/G.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/L.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/I.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Wh.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Y.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/images (1).jpg" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/F.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/T.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/SEM.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/G.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/L.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/I.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Wh.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Y.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/images (1).jpg" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/F.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/T.png" alt="" loading="lazy" decoding="async">
                     <!-- </div> -->
                     
                 </div>
@@ -912,30 +919,30 @@ body{
         <div class="panel-mnew-view-container panel-mnew-view-container-white">
             <!-- <div class="scrolling-text-mnew-view-container"> -->
                     <div class="image-wrapper-new-sectt">
-                        <img src="./picture/Angular.png" alt="">
-                        <img src="./picture/W.png" alt="">
-                        <img src="./picture/M.png" alt="">
-                        <img src="./picture/CSS.png" alt="">
-                        <img src="./picture/HTML.png" alt="">
-                        <img src="./picture/D.png" alt="">
-                        <img src="./picture/php-icon-2048x2048-79jhb719.png" alt="">
-                        <img src="./picture/images (5).png" alt="">
-                        <img src="./picture/Angular.png" alt="">
-                        <img src="./picture/Angular.png" alt="">
-                        <img src="./picture/W.png" alt="">
-                        <img src="./picture/M.png" alt="">
-                        <img src="./picture/CSS.png" alt="">
-                        <img src="./picture/HTML.png" alt="">
-                        <img src="./picture/D.png" alt="">
-                        <img src="./picture/php-icon-2048x2048-79jhb719.png" alt="">
-                        <img src="./picture/images (5).png" alt="">
-                        <img src="./picture/Angular.png" alt="">
+                        <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/wordpress-icon.webp" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/M.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/CSS.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/HTML.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/D.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/php-icon.webp" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/images (5).png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/wordpress-icon.webp" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/M.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/CSS.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/HTML.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/D.png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/php-icon.webp" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/images (5).png" alt="" loading="lazy" decoding="async">
+                        <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
                     <!-- </div> -->
                 
             </div>
         </div>
     </div>
- <div id="main-container-your-indus">
+ <div id="main-container-your-indus" class="defer-offscreen">
 
     <div class="container-new-sect">
         <div class="content-new-sect">
@@ -946,54 +953,54 @@ body{
         
         <div class="sidebar white">
             <div class="image-wrapper-new-sect">
-                <img src="./picture/SEM.png" alt="">
-                <img src="./picture/G.png" alt="">
-                <img src="./picture/L.png" alt="">
-                <img src="./picture/I.png" alt="">
-                <img src="./picture/Wh.png" alt="">
-                <img src="./picture/Y.png" alt="">
-                <img src="./picture/images (1).jpg" alt="">
-                <img src="./picture/F.png" alt="">
-                <img src="./picture/T.png" alt="">
-                <img src="./picture/SEM.png" alt="">
-                <img src="./picture/G.png" alt="">
-                <img src="./picture/L.png" alt="">
-                <img src="./picture/I.png" alt="">
-                <img src="./picture/Wh.png" alt="">
-                <img src="./picture/Y.png" alt="">
-                <img src="./picture/images (1).jpg" alt="">
-                <img src="./picture/F.png" alt="">
-                <img src="./picture/T.png" alt="">
+                <img src="./picture/SEM.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/G.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/L.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/I.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Wh.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Y.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/images (1).jpg" alt="" loading="lazy" decoding="async">
+                <img src="./picture/F.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/T.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/SEM.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/G.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/L.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/I.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Wh.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Y.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/images (1).jpg" alt="" loading="lazy" decoding="async">
+                <img src="./picture/F.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/T.png" alt="" loading="lazy" decoding="async">
             </div>
             
         </div>
         <div class="sidebar red">
             <div class="image-wrapper-new-sect">
-                <img src="./picture/Angular.png" alt="">
-                <img src="./picture/W.png" alt="">
-                <img src="./picture/M.png" alt="">
-                <img src="./picture/CSS.png" alt="">
-                <img src="./picture/HTML.png" alt="">
-                <img src="./picture/D.png" alt="">
-                <img src="./picture/php-icon-2048x2048-79jhb719.png" alt="">
-                <img src="./picture/images (5).png" alt="">
-                <img src="./picture/Angular.png" alt="">
-                <img src="./picture/Angular.png" alt="">
-                <img src="./picture/W.png" alt="">
-                <img src="./picture/M.png" alt="">
-                <img src="./picture/CSS.png" alt="">
-                <img src="./picture/HTML.png" alt="">
-                <img src="./picture/D.png" alt="">
-                <img src="./picture/php-icon-2048x2048-79jhb719.png" alt="">
-                <img src="./picture/images (5).png" alt="">
-                <img src="./picture/Angular.png" alt="">
+                <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/wordpress-icon.webp" alt="" loading="lazy" decoding="async">
+                <img src="./picture/M.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/CSS.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/HTML.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/D.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/php-icon.webp" alt="" loading="lazy" decoding="async">
+                <img src="./picture/images (5).png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/wordpress-icon.webp" alt="" loading="lazy" decoding="async">
+                <img src="./picture/M.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/CSS.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/HTML.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/D.png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/php-icon.webp" alt="" loading="lazy" decoding="async">
+                <img src="./picture/images (5).png" alt="" loading="lazy" decoding="async">
+                <img src="./picture/Angular.png" alt="" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
  </div>
 
 
-   <div id="main-container-get-industry-top-container">
+   <div id="main-container-get-industry-top-container" class="defer-offscreen">
     <div id="get-industry-container">
         <h1 id="get-industry-heading">GET INDUSTRY SPECIFIC <span style="color: #ff0000;">SOLUTIONS</span></h1>
         <P id="get-industry-subheading">You can count on us to assist you in any Industry, regardless of the challenges
@@ -1001,68 +1008,68 @@ body{
             brand; you will always get assistance with tailored solutions; at <span style="color: red;">BRANDIXZEN</span>.</P>
     </div>
     <div id="picture-logo-container-get-industry">
-        <div id=""><a href="/industry/digital-marketing-for-d2c"><img src="./picture/rect6929.png" alt="">
+        <div id=""><a href="/industry/digital-marketing-for-d2c"><img src="./picture/rect6929.png" alt="" loading="lazy" decoding="async">
             <p class="b2c">D2C</p></a>
         </div>
         <div id="b2c">
-            <a href="/industry/digital-marketing-for-b2c"><img src="./picture/rect6901-0-6.png" alt="">
+            <a href="/industry/digital-marketing-for-b2c"><img src="./picture/rect6901-0-6.png" alt="" loading="lazy" decoding="async">
                 <p class="b2c">B2C</p></a>
         </div>
-        <div id="b2b"><a href="/industry/digital-marketing-for-b2b"><img src="./picture/rect6929-8.png" alt="">
+        <div id="b2b"><a href="/industry/digital-marketing-for-b2b"><img src="./picture/rect6929-8.png" alt="" loading="lazy" decoding="async">
             <p class="b2c">B2B</p></a>
         </div>
-        <div id="sme"><a href="/industry/digital-marketing-for-sme"><img src="./picture/rect6929-8-6-1-3.png" alt="">
+        <div id="sme"><a href="/industry/digital-marketing-for-sme"><img src="./picture/rect6929-8-6-1-3.png" alt="" loading="lazy" decoding="async">
             <p>SME's</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-startups"><img src="./picture/rect6929-8-6-1.png" alt="">
+        <div><a href="/industry/digital-marketing-for-startups"><img src="./picture/rect6929-8-6-1.png" alt="" loading="lazy" decoding="async">
             <p>Start-Ups</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-consultants"><img src="./picture/rect6901-5-4.png" alt="">
+        <div><a href="/industry/digital-marketing-for-consultants"><img src="./picture/rect6901-5-4.png" alt="" loading="lazy" decoding="async">
             <p>Consultant</p></a>
         </div>
-        <div id="img-lat"><a href="/industry/digital-marketing-for-local-business"><img  src="./picture/rect6901-5-3.png" alt="">
+        <div id="img-lat"><a href="/industry/digital-marketing-for-local-business"><img  src="./picture/rect6901-5-3.png" alt="" loading="lazy" decoding="async">
             <p>Local Business</p></a>
         </div>
-        <div id="img-lat"><a href="/industry/digital-marketing-for-large-enterprises"><img src="./picture/rect6929-9.png" alt="">
+        <div id="img-lat"><a href="/industry/digital-marketing-for-large-enterprises"><img src="./picture/rect6929-9.png" alt="" loading="lazy" decoding="async">
             <p>Large <br> Enterprice</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-celebrities"><img src="./picture/rect6901-0.png" alt="">
+        <div><a href="/industry/digital-marketing-for-celebrities"><img src="./picture/rect6901-0.png" alt="" loading="lazy" decoding="async">
             <p>Celebrities</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-media-companies"><img src="./picture/rect6929-9-7.png" alt="">
+        <div><a href="/industry/digital-marketing-for-media-companies"><img src="./picture/rect6929-9-7.png" alt="" loading="lazy" decoding="async">
             <p>Media</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-politicians"><img src="./picture/rect6901.png" alt="">
+        <div><a href="/industry/digital-marketing-for-politicians"><img src="./picture/rect6901.png" alt="" loading="lazy" decoding="async">
             <p>Politicians</p></a>
         </div>
       
-        <div><a href="/industry/digital-marketing-for-election-campaign"><img src="./picture/rect6929-8-4.png" alt="">
+        <div><a href="/industry/digital-marketing-for-election-campaign"><img src="./picture/rect6929-8-4.png" alt="" loading="lazy" decoding="async">
             <p>Election <br>Campaign</p></a>
         </div>
-        <div><a  id="img-lat" href="/industry/digital-marketing-for-fintech-companies"><img src="./picture/rect6901-5.png" alt="">
+        <div><a  id="img-lat" href="/industry/digital-marketing-for-fintech-companies"><img src="./picture/rect6901-5.png" alt="" loading="lazy" decoding="async">
             <p>Fintech</p></a>
         </div>
-        <div id="img-lat"><a href="/industry/digital-marketing-for-real-estate-companies"><img src="./picture/rect6929-8-4-2.png" alt="">
+        <div id="img-lat"><a href="/industry/digital-marketing-for-real-estate-companies"><img src="./picture/rect6929-8-4-2.png" alt="" loading="lazy" decoding="async">
             <p>Real Estate</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-real-healthcare-companies"><img src="./picture/rect6929-9-4.png" alt="">
+        <div><a href="/industry/digital-marketing-for-real-healthcare-companies"><img src="./picture/rect6929-9-4.png" alt="" loading="lazy" decoding="async">
             <p>Hospital</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-hospitality-companies"><img src="./picture/rect6901-3.png" alt="">
+        <div><a href="/industry/digital-marketing-for-hospitality-companies"><img src="./picture/rect6901-3.png" alt="" loading="lazy" decoding="async">
             <p>Hotels</p></a>
         </div>
 
-        <div id="img-lat"><a href="/industry/digital-marketing-for-educational-institutes"><img src="./picture/rect6929-8-6.png" alt="">
+        <div id="img-lat"><a href="/industry/digital-marketing-for-educational-institutes"><img src="./picture/rect6929-8-6.png" alt="" loading="lazy" decoding="async">
             <p>Educational</p></a>
         </div>
 
-        <div id="img-lat"><a href="/industry/digital-marketing-for-ecommerce-companies"><img src="./picture/rect6901-3-3.png" alt="">
+        <div id="img-lat"><a href="/industry/digital-marketing-for-ecommerce-companies"><img src="./picture/rect6901-3-3.png" alt="" loading="lazy" decoding="async">
             <p>E-Commerce</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-crowdfunding-companies"><img src="./picture/rect6929-8-4-1-9.png" alt="">
+        <div><a href="/industry/digital-marketing-for-crowdfunding-companies"><img src="./picture/rect6929-8-4-1-9.png" alt="" loading="lazy" decoding="async">
             <p>Crowd <br> Funding</p></a>
         </div>
-        <div><a href="/industry/digital-marketing-for-mobile-apps"><img src="./picture/rect6929-8-4-1.png" alt="">
+        <div><a href="/industry/digital-marketing-for-mobile-apps"><img src="./picture/rect6929-8-4-1.png" alt="" loading="lazy" decoding="async">
             <p>Mobile App</p></a>
         </div>
 
@@ -1070,7 +1077,7 @@ body{
    </div>
    
     
-    <div id="only-mobilwe-screen-no-laptop">
+    <div id="only-mobilwe-screen-no-laptop" class="defer-offscreen">
         <div class="about-container">
             <div id="heading-about-container-about">
                 <h1><span style="color: red;">BRANDIXZEN</span> PROFILE</h1>
@@ -1091,46 +1098,46 @@ body{
             <div class="image-about-container">
                 <div class="image-row-new-row">
     
-                    <img id="ISO-new" src="./picture/1_-_ISO_9000-removebg-preview.png" alt="ISO">
+                    <img id="ISO-new" src="./picture/1_-_ISO_9000-removebg-preview.png" alt="ISO" loading="lazy" decoding="async">
     
     
-                    <img id="" src="./picture/2_-_CMMI-removebg-preview.png" alt="CMMI">
+                    <img id="" src="./picture/2_-_CMMI-removebg-preview.png" alt="CMMI" loading="lazy" decoding="async">
     
                 
     
-                    <img id="new-ggogle-mobile" src="./picture/3 - Google Partner.png" alt="Google">
+                    <img id="new-ggogle-mobile" src="./picture/3 - Google Partner.png" alt="Google" loading="lazy" decoding="async">
     
     
-                    <img id="" src="./picture/4 - Meta.png" alt="Meta">
+                    <img id="" src="./picture/4 - Meta.png" alt="Meta" loading="lazy" decoding="async">
     
     
-                    <img id="new-ggogle-mobile-amazon" src="./picture/WhatsApp Image 2024-07-24 at 12.04.16_36e4b743.jpg" alt="WhatsApp">
+                    <img id="new-ggogle-mobile-amazon" src="./picture/WhatsApp Image 2024-07-24 at 12.04.16_36e4b743.jpg" alt="WhatsApp" loading="lazy" decoding="async">
     
               
     
-                    <img id="new-ggogle-mobile-amazon" src="./picture/6 - Microsoft.png" alt="Microsoft">
+                    <img id="new-ggogle-mobile-amazon" src="./picture/6 - Microsoft.png" alt="Microsoft" loading="lazy" decoding="async">
     
-                    <img id="newlinkdin-in" src="./picture/5 - linkedin.jpg" alt="LinkedIn">
+                    <img id="newlinkdin-in" src="./picture/5 - linkedin.jpg" alt="LinkedIn" loading="lazy" decoding="async">
     
     
-                    <img id="new-ggogle-mobile-hulot" src="./picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot">
+                    <img id="new-ggogle-mobile-hulot" src="./picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot" loading="lazy" decoding="async">
     
-                    <img id="newhootsute" src="./picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite">
+                    <img id="newhootsute" src="./picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite" loading="lazy" decoding="async">
     
-                    <img id="newmoz" src="./picture/9_-_MOZ-removebg-preview.png" alt="Moz">
+                    <img id="newmoz" src="./picture/9_-_MOZ-removebg-preview.png" alt="Moz" loading="lazy" decoding="async">
     
                 </div>
     
             </div>
             <div id="container-readmore-all-page">
-                <button id="read-more-new"><a href="/about-us/brandixzen-company">About BRANDIXZEN</a></button>
+                <a id="read-more-new" href="/about-us/brandixzen-company">About BRANDIXZEN</a>
             </div>
         </div>
     </div>
-    <div id="our-client-all-page">
+    <div id="our-client-all-page" class="defer-offscreen">
         OUR &nbsp; <span style="color: red">CLIENTS</span>
     </div>
-    <div class="tickerwrapper">
+    <div class="tickerwrapper defer-offscreen">
         <ul class='list'>
           <li class='listitem'><span>HAR</span></li>
           <li class='listitem'><span>SRC</span></li>
@@ -1144,7 +1151,7 @@ body{
     </div>
     
     
-    <div class="testimonial-page">
+    <div class="testimonial-page defer-offscreen">
         <!-- Text Testimonial Section -->
         <section class="text-testimonial">
             <div class="testimonial-container">
@@ -1153,7 +1160,7 @@ body{
                     <!-- Testimonial 1 -->
                     <div class="testimonial-content">
                         <div class="image-container-new">
-                            <img src="https://images.pexels.com/photos/12185573/pexels-photo-12185573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Customer Image">
+                            <img src="https://images.pexels.com/photos/12185573/pexels-photo-12185573.jpeg?auto=compress&cs=tinysrgb&w=480&h=480&fit=crop" alt="Customer Samantha William" loading="lazy" decoding="async">
                         </div>
                         <div class="testimonial-text">
                             <h3 id="testimonial-h3">Help us improve our productivity</h3>
@@ -1166,7 +1173,7 @@ body{
                     <!-- Testimonial 2 -->
                     <div class="testimonial-content">
                         <div class="image-container-new">
-                            <img src="https://images.pexels.com/photos/936043/pexels-photo-936043.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Image">
+                            <img src="https://images.pexels.com/photos/936043/pexels-photo-936043.jpeg?auto=compress&cs=tinysrgb&w=480&h=480&fit=crop" alt="Customer John Doe" loading="lazy" decoding="async">
                         </div>
                         <div class="testimonial-text">
                             <h3 id="testimonial-h3">Great customer support</h3>
@@ -1179,7 +1186,7 @@ body{
                     <!-- Testimonial 3 -->
                     <div class="testimonial-content">
                         <div class="image-container-new">
-                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customer Image">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=480&h=480&fit=crop" alt="Customer Emily Johnson" loading="lazy" decoding="async">
                         </div>
                         <div class="testimonial-text">
                             <h3 id="testimonial-h3">Highly recommended</h3>
@@ -1192,7 +1199,7 @@ body{
             </div>
         </section>
     </div>
-    <div id="only-laptop-screen-no-mobile">
+    <div id="only-laptop-screen-no-mobile" class="defer-offscreen">
         <div class="about-container">
             <div id="heading-about-container-about">
                 <h1><span style="color: red;">BRANDIXZEN</span> PROFILE</h1>
@@ -1213,47 +1220,47 @@ body{
             <div class="image-about-container">
                 <div class="image-row">
     
-                    <img id="googleeed" src="./picture/1_-_ISO_9000-removebg-preview.png" alt="ISO">
+                    <img id="googleeed" src="./picture/1_-_ISO_9000-removebg-preview.png" alt="ISO" loading="lazy" decoding="async">
     
     
-                    <img id="google" src="./picture/2_-_CMMI-removebg-preview.png" alt="CMMI">
-    
-                </div>
-                <div class="image-row">
-    
-                    <img id="Google" src="./picture/3 - Google Partner.png" alt="Google">
-    
-    
-                    <img id="meta-pni" src="./picture/4 - Meta.png" alt="Meta">
-    
-    
-                    <img id="amazon" src="./picture/WhatsApp Image 2024-07-24 at 12.04.16_36e4b743.jpg" alt="WhatsApp">
+                    <img id="google" src="./picture/2_-_CMMI-removebg-preview.png" alt="CMMI" loading="lazy" decoding="async">
     
                 </div>
                 <div class="image-row">
     
-                    <img id="google-mg" src="./picture/6 - Microsoft.png" alt="Microsoft">
-    
-                    <img id="linkedin" src="./picture/5 - linkedin.jpg" alt="LinkedIn">
+                    <img id="Google" src="./picture/3 - Google Partner.png" alt="Google" loading="lazy" decoding="async">
     
     
-                    <img id="HubSpot" src="./picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot">
+                    <img id="meta-pni" src="./picture/4 - Meta.png" alt="Meta" loading="lazy" decoding="async">
     
-                    <img id="HootSuite" src="./picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite">
     
-                    <img id="MOZ" src="./picture/9_-_MOZ-removebg-preview.png" alt="Moz">
+                    <img id="amazon" src="./picture/WhatsApp Image 2024-07-24 at 12.04.16_36e4b743.jpg" alt="WhatsApp" loading="lazy" decoding="async">
+    
+                </div>
+                <div class="image-row">
+    
+                    <img id="google-mg" src="./picture/6 - Microsoft.png" alt="Microsoft" loading="lazy" decoding="async">
+    
+                    <img id="linkedin" src="./picture/5 - linkedin.jpg" alt="LinkedIn" loading="lazy" decoding="async">
+    
+    
+                    <img id="HubSpot" src="./picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot" loading="lazy" decoding="async">
+    
+                    <img id="HootSuite" src="./picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite" loading="lazy" decoding="async">
+    
+                    <img id="MOZ" src="./picture/9_-_MOZ-removebg-preview.png" alt="Moz" loading="lazy" decoding="async">
     
                 </div>
     
             </div>
             <div id="container-readmore-all-page">
-                <button id="read-more-new"><a href="/about-us/brandixzen-company">About BRANDIXZEN</a></button>
+                <a id="read-more-new" href="/about-us/brandixzen-company">About BRANDIXZEN</a>
             </div>
         </div>
     </div>
-    <div class="container-old">
+    <div class="container-old defer-offscreen">
         <div class="new-old-left-section">
-            <img src="./picture/ofspace-llc-iprE_0Fkg5g-unsplash.jpg" alt="Google" class="new-old-background-image">
+            <img src="./picture/contact-background.webp" alt="Team planning a digital growth strategy" class="new-old-background-image" loading="lazy" decoding="async">
                 <div class="new-conect">
                     <p id="ele-new-form" style="color: white;">Ready to Elevate Your Brand? <br> Let's Make It Happen with<span style="color: red;"> BrandIxZen!</p>
             </div>
@@ -1266,14 +1273,14 @@ body{
     
     </div>
 
-    <div id="seo-icon-container" data-newsletter-section>
+    <div id="seo-icon-container" class="defer-offscreen" data-newsletter-section>
         <p id="subscribe-title">Subscribe to our Newsletter</p>
         <div class="unique-container">
         <div class="content-box newsletter-content-box">
             <form class="email-subscription newsletter-subscription-form" data-newsletter-form method="POST" action="{{ route('newsletter.subscribe') }}">
                 @csrf
                 <div class="newsletter-input-row">
-                    <input class="email-input" type="email" name="email" placeholder="Enter Email ID" required>
+                    <input class="email-input" type="email" name="email" placeholder="Enter Email ID" aria-label="Email address for newsletter" autocomplete="email" required>
                     <button class="email-button" type="submit">Subscribe</button>
                 </div>
                 <p class="newsletter-status-message" data-newsletter-message aria-live="polite"></p>
@@ -1285,7 +1292,7 @@ body{
             <form id="input-form-below-top-right" class="newsletter-subscription-form" data-newsletter-form method="POST" action="{{ route('newsletter.subscribe') }}">
               @csrf
               <div class="newsletter-input-row">
-                <input type="email" name="email" id="input-box-below-top-right" placeholder="Enter Email ID" required>
+                <input type="email" name="email" id="input-box-below-top-right" placeholder="Enter Email ID" aria-label="Email address for newsletter" autocomplete="email" required>
                 <button type="submit" id="submit-button-below-top-right">Subscribe</button>
               </div>
               <p class="newsletter-status-message" data-newsletter-message aria-live="polite"></p>
@@ -1293,32 +1300,32 @@ body{
           </div>
           <div class="icon-container">
             <div class="icon-wrapper" id="facebook-wrapper">
-                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg" alt="Facebook">
+                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg" alt="Facebook" loading="lazy" decoding="async">
             </div>
             <div class="icon-wrapper" id="instagram-wrapper">
-                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg" alt="Instagram">
+                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg" alt="Instagram" loading="lazy" decoding="async">
             </div>
             <div class="icon-wrapper" id="youtube-wrapper">
-                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg" alt="YouTube">
+                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg" alt="YouTube" loading="lazy" decoding="async">
             </div>
             <div class="icon-wrapper" id="twitter-wrapper">
-                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg" alt="Twitter">
+                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg" alt="Twitter" loading="lazy" decoding="async">
             </div>
             <div class="icon-wrapper" id="linkedin-wrapper">
-                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg" alt="LinkedIn">
+                <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg" alt="LinkedIn" loading="lazy" decoding="async">
             </div>
             <div class="icon-wrapper" id="pirts-wrapper">
-                <img src="./picture/icons8-pinterest-logo-50.png" alt="">
+                <img src="./picture/icons8-pinterest-logo-50.png" alt="" loading="lazy" decoding="async">
             </div>
             <div class="icon-wrapper" id="whatsapp-wrapper">
-                <img src="./picture/chat.png" alt="">
+                <img src="./picture/chat.png" alt="" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
         
     </div>
    
-    <footer>
+    <footer class="defer-offscreen">
         <div class="footer-container">
         
         <!-- <div class="footer-section">
@@ -1511,7 +1518,7 @@ body{
                             <h2><a href="">Snippets</a></h2>
                             </div>
         <!-- <div class="footer-section-logo">
-        <img  src="./picture/image14180.png" alt="BrandIxZen Logo" class="footer-logo">
+        <img  src="./picture/image14180.png" alt="BrandIxZen Logo" class="footer-logo" loading="lazy" decoding="async">
         </div> -->
         </div>
        
@@ -1533,11 +1540,11 @@ body{
         
         <!-- </div> -->
         </footer>
-        <div id="mny-kkilohguhjg-imhgutki-mjj">
+        <div id="mny-kkilohguhjg-imhgutki-mjj" class="defer-offscreen">
             <div class="new-footer-section">
             <div class="footer-line-container">
             <hr class="footer-line">
-            <img src="./picture/image14180.png" alt="BrandIxZen Logo" class="footer-logo">
+            <img src="./picture/image14180.png" alt="BrandIxZen Logo" class="footer-logo" loading="lazy" decoding="async">
             <hr class="footer-line">
             </div>
             </div>
@@ -1676,7 +1683,7 @@ const hideDropdown = (dropdownClass) => {
 
             lines.forEach((line, index) => {
                 setTimeout(() => {
-                    line.classList.add('animated');
+                    if (line) line.classList.add('animated');
                 }, index * 1000); // Adjust the delay as needed
             });
         });
@@ -1968,12 +1975,16 @@ window.addEventListener('load', function() {
     }
 
     // Attach the redirection function to the 'Read More' button click event
-    document.querySelector('#new-read-more').addEventListener('click', redirectToPage);
+    const readMoreButton = document.querySelector('#new-read-more');
+    if (readMoreButton) readMoreButton.addEventListener('click', redirectToPage);
 
     // Optionally, attach the same functionality to 'Know all Our Services' button if needed
-    document.querySelector('#new-read-more-new').addEventListener('click', function() {
-        window.location.href = 'all-services.html'; // or any other URL
-    });
+    const allServicesButton = document.querySelector('#new-read-more-new');
+    if (allServicesButton) {
+        allServicesButton.addEventListener('click', function() {
+            window.location.href = 'all-services.html';
+        });
+    }
 
     // Optionally, handle clicks on the list items to set the active class
     document.querySelectorAll('.options li').forEach(item => {
@@ -1985,6 +1996,8 @@ window.addEventListener('load', function() {
 });
 
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
   <script>
  document.addEventListener('DOMContentLoaded', function() {
 
@@ -2052,9 +2065,6 @@ window.addEventListener('load', function() {
            
 
   </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
     <script src="{{ asset('script/site-actions.js') }}?v=3"></script>
   <script src="{{ asset('script/newsletter-subscription.js') }}?v=1"></script>
 
