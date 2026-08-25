@@ -7,18 +7,37 @@
             <meta name="description" content="As a BrandIxZen’s CSR; we do not engage with businesses or industries
             involved in any type of illegal, anti-social, anti-cultural and businesses in fraudulent and
             fishing activities.">
-        <link rel="stylesheet" href="../style/footer.css">
-        <script src="../footerTemplate/sr.js"></script>
+        <link rel="preload" as="image" href="../picture/company-hero-mobile-poster.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+        <link rel="preload" as="image" href="../picture/about-social-hero-poster.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+        <link rel="stylesheet" href="../style/footer.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../style/footer.css"></noscript>
         <link rel="stylesheet" href="../style/aboutus.css">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../nav2.css">
-        <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
+        <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="../style/seo.css?v=1">
-        <script src="../script/script.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" media="print" onload="this.media='all'">
         <style>
+       .about-defer-offscreen { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+       #captcha-text { color: #fff !important; background-color: #00008b !important; }
+       #refresh-captcha { color: #fff !important; background-color: #b00020 !important; }
+       #top-heading span[style*="color: red"],
+       #our-presence span[style*="color: red"] { color: #ff8a80 !important; }
+       #main-container-seo span[style*="color: red"],
+       #only-mobilwe-screen-no-laptop span[style*="color: red"] { color: #b00020 !important; }
+       #new-old-main-container span[style*="color: red"],
+       .faq-container span[style*="color: red"] { color: #ff8a80 !important; }
+       @media only screen and (min-width: 769px) {
+           #main-container-seo #intro-text span[style*="background-color: #0575E6"] { background-color: #004f9e !important; color: #fff !important; }
+           #main-conatiner-faq-container span[style*="color: red"], .faq-container span[style*="color: red"] { color: #b00020 !important; }
+           #main-conatiner-faq-container #shoot-email, .faq-container #shoot-email { background-color: #b00020 !important; color: #fff !important; }
+           #main-container-seo .benefit-item, #main-container-seo .benefit-heading { color: #1b0a54 !important; }
+           #seo-page-container span[style*="color: red"], #seo-page-container #brand-name { color: #ffb3b3 !important; }
+           #new-old-main-container span[style*="color: red"], #new-old-highlighted-text, #new-old-highlighted-text-right { color: #ffb3b3 !important; }
+           #our-client-all-page span[style*="color: red"] { color: #ffb3b3 !important; }
+       }
            #container-map-for-company{
             margin-top: 5%;
            }
@@ -388,7 +407,7 @@
     <div id="navbar-placeholder-mobile"></div>
     <div id="only-top-banner-mobile">
         <div class="background-gif">
-            <img id="background-image" src="../picture/social-media1.gif" alt="Background Image">
+            <img id="background-image" src="../picture/company-hero-mobile-poster.webp" data-animated-src="../picture/company-hero-mobile.webp" alt="BrandIxZen corporate social responsibility" width="750" height="1500" fetchpriority="high" loading="eager" decoding="async">
            
             <div class="very-new-navbartext-overlay">
                 <div class="new-old-text-content">
@@ -406,7 +425,7 @@
         <div id="navbar-placeholder-laptop"></div>
         <div id="only-top-banner-laptop">
             <div class="background-gif">
-                <img id="background-image" src="../picture/social-media1.gif" alt="Background Image">
+                <img id="background-image" src="../picture/about-social-hero-poster.webp" data-animated-src="../picture/company-hero-animated.webp" alt="BrandIxZen corporate social responsibility" width="750" height="420" fetchpriority="high" loading="eager" decoding="async">
             </div>
         </div>
     <div class="container-old-new-new-hm">
@@ -425,7 +444,7 @@
         </div>
     </div>
 
-    <section class="brandixzen-section-new-scr">
+    <section class="brandixzen-section-new-scr about-defer-offscreen">
         <div class="content-container-new-scr">
             <h1 class="gradient-heading-section-new-scr">BrandIxZen: A Legacy of Excellence</h1>
             <div class="description-new-scr-container">
@@ -518,7 +537,7 @@
         </div>
       </div>
     
-    <section id="commitment-section-new-scr">
+    <section id="commitment-section-new-scr" class="about-defer-offscreen">
         <div class="section-container-new-scr">
             <div class="section-content">
                 <h2 id="bottom-h2-csr-mian">Our Commitment to Ethical Guidelines</h2>
@@ -544,6 +563,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
     
 </body>
+    <script>
+    (() => {
+        const selector = window.matchMedia('(max-width: 768px)').matches
+            ? '#only-top-banner-mobile img[data-animated-src]'
+            : '#only-top-banner-laptop img[data-animated-src]';
+        const hero = document.querySelector(selector);
+        if (!hero) return;
+
+        const startHeroAnimation = () => {
+            if (!hero.dataset.animatedSrc) return;
+            hero.src = hero.dataset.animatedSrc;
+            delete hero.dataset.animatedSrc;
+        };
+
+        window.addEventListener('pointerdown', startHeroAnimation, { once: true, passive: true });
+        window.addEventListener('touchstart', startHeroAnimation, { once: true, passive: true });
+        window.addEventListener('scroll', startHeroAnimation, { once: true, passive: true });
+        window.addEventListener('keydown', startHeroAnimation, { once: true });
+    })();
+    </script>
 <script>
 const dropdownHideTimers = new Map();
 
@@ -643,16 +682,22 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 
 
-    document.getElementById('input-form-below-top-right').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const inputText = document.getElementById('input-box-below-top-right').value;
-      alert(`Submitted: ${inputText}`);
-    });
+    const footerInputForm = document.getElementById('input-form-below-top-right');
+    if (footerInputForm) {
+      footerInputForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const footerInput = document.getElementById('input-box-below-top-right');
+        const inputText = footerInput ? footerInput.value : '';
+        alert(`Submitted: ${inputText}`);
+      });
+    }
 
-    document.getElementById("shoot-email").addEventListener("click", function() {
-    // Redirects to the default email app with the recipient pre-filled
-    window.location.href = "mailto:sharmapujan209@gmail.com";
-});
+    const shootEmailButton = document.getElementById('shoot-email');
+    if (shootEmailButton) {
+      shootEmailButton.addEventListener('click', function() {
+        window.location.href = "mailto:sharmapujan209@gmail.com";
+      });
+    }
 
 
 function openWhatsApp() {

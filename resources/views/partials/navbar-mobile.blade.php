@@ -3,14 +3,14 @@
         <div class="logo">
             <img src="../picture/Logo.png" alt="Logo">
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" onclick="toggleMenu()" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); toggleMenu(); }" role="button" tabindex="0" aria-label="Open navigation menu" aria-controls="menu">
             &#9776;
         </div>
         <div class="quote-button" data-action="quote-request">
             <button type="button">Quote Request</button>
         </div>
         <div class="whatsapp-icon" data-action="whatsapp">
-            <img src="../picture/image23096.png" alt="WhatsApp">
+            <img src="../picture/image23096-2x.webp" alt="WhatsApp" width="31" height="35" loading="eager" decoding="async">
         </div>
     </div>
     

@@ -6,19 +6,37 @@
     <title>BrandIxZen - SEO, Digital Marketing & Online Branding Company</title>
         <meta name="description" content="BrandIxZen is one of the oldest SEO & Digital Marketing Company and
         Expert in Search Engine Optimization, Digital Marketing & Online Branding.">
-    <link rel="stylesheet" href="../style/footer.css">
-    <script src="../footerTemplate/sr.js"></script>
+    <link rel="stylesheet" href="../style/footer.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../style/footer.css"></noscript>
     <link rel="stylesheet" href="../style/aboutus.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../nav2.css">
-    <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
+    <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../style/seo.css?v=1">
-    <script src="../script/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <style>
+       .about-defer-offscreen { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+       #captcha-text { color: #fff !important; background-color: #00008b !important; }
+       #refresh-captcha { color: #fff !important; background-color: #b00020 !important; }
+       #top-heading span[style*="color: red"],
+       #our-presence span[style*="color: red"] { color: #ff8a80 !important; }
+       #main-container-seo span[style*="color: red"],
+       #only-mobilwe-screen-no-laptop span[style*="color: red"] { color: #b00020 !important; }
+       #new-old-main-container span[style*="color: red"],
+       .faq-container span[style*="color: red"] { color: #ff8a80 !important; }
+       @media only screen and (min-width: 769px) {
+           #main-container-seo #intro-text span[style*="background-color: #0575E6"] { background-color: #004f9e !important; color: #fff !important; }
+           #main-conatiner-faq-container span[style*="color: red"], .faq-container span[style*="color: red"] { color: #b00020 !important; }
+           #main-conatiner-faq-container #shoot-email, .faq-container #shoot-email { background-color: #b00020 !important; color: #fff !important; }
+           #main-container-seo .benefit-item, #main-container-seo .benefit-heading { color: #1b0a54 !important; }
+           #seo-page-container span[style*="color: red"], #seo-page-container #brand-name { color: #ffb3b3 !important; }
+           #new-old-main-container span[style*="color: red"], #new-old-highlighted-text, #new-old-highlighted-text-right { color: #ffb3b3 !important; }
+           #our-client-all-page span[style*="color: red"] { color: #ffb3b3 !important; }
+           .no-openings h2, .no-openings-icon, .hiring-badge, .apply-btn, .career-job-actions .apply-btn { color: #a51d1d !important; }
+           .filter-btn:hover, .filter-btn.active { background-color: #a51d1d !important; border-color: #a51d1d !important; color: #fff !important; }
+       }
        #container-map-for-company{
         margin-top: 5%;
        }
@@ -639,7 +657,7 @@ overflow-y: auto; */
             <div class="career-details-backdrop" data-close-job-details></div>
             <div class="career-details-panel" role="dialog" aria-modal="true" aria-labelledby="job-details-title">
                 <button type="button" class="career-details-close" data-close-job-details aria-label="Close">&times;</button>
-                <div class="career-details-header"><img id="job-details-image" alt="Job preview"><div><div id="job-details-tags" class="tags"></div><h2 id="job-details-title"></h2></div></div>
+                <div class="career-details-header"><img id="job-details-image" alt="Job preview" loading="lazy" decoding="async"><div><div id="job-details-tags" class="tags"></div><h2 id="job-details-title"></h2></div></div>
                 <div class="career-details-section"><h3>Overview</h3><p id="job-details-overview"></p></div>
                 <div class="career-details-section"><h3>Responsibilities</h3><p id="job-details-responsibilities"></p></div>
                 <div class="career-details-section"><h3>Required Skills</h3><p id="job-details-required"></p></div>
@@ -919,16 +937,22 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 
 
-    document.getElementById('input-form-below-top-right').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const inputText = document.getElementById('input-box-below-top-right').value;
-      alert(`Submitted: ${inputText}`);
-    });
+    const footerInputForm = document.getElementById('input-form-below-top-right');
+    if (footerInputForm) {
+      footerInputForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const footerInput = document.getElementById('input-box-below-top-right');
+        const inputText = footerInput ? footerInput.value : '';
+        alert(`Submitted: ${inputText}`);
+      });
+    }
 
-    document.getElementById("shoot-email").addEventListener("click", function() {
-    // Redirects to the default email app with the recipient pre-filled
-    window.location.href = "mailto:sharmapujan209@gmail.com";
-});
+    const shootEmailButton = document.getElementById('shoot-email');
+    if (shootEmailButton) {
+      shootEmailButton.addEventListener('click', function() {
+        window.location.href = "mailto:sharmapujan209@gmail.com";
+      });
+    }
 
 
 function openWhatsApp() {
@@ -1231,7 +1255,7 @@ function closeModal() {
 }
 
 // Add event listener to close button
-document.querySelector('.close-button').addEventListener('click', closeModal);
+document.querySelector('.close-button')?.addEventListener('click', closeModal);
 
 // Close modal when clicking outside of the modal-content
 window.addEventListener('click', (event) => {
@@ -1380,7 +1404,7 @@ displayJobs('all');
                 document.getElementById('modal-job-description').textContent = job.description;
                 modal.style.display = 'flex';
             });
-            document.querySelector('.close-button').addEventListener('click', () => modal.style.display = 'none');
+            document.querySelector('.close-button')?.addEventListener('click', () => modal.style.display = 'none');
             modal.addEventListener('click', event => { if (event.target === modal) modal.style.display = 'none'; });
             document.querySelectorAll('[data-close-job-details]').forEach(el => el.addEventListener('click', () => {
                 const detailsModal = document.getElementById('job-details-modal');

@@ -6,22 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrandIxZen</title>
     <!-- <link rel="icon" href="../picture/Logo.png" type="image/x-icon"> -->
-    <link rel="stylesheet" href="../style/footer.css">
-    <script src="../footerTemplate/sr.js"></script>
+    <link rel="preload" as="image" href="../picture/company-map-optimized.webp" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="../style/footer.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../style/footer.css"></noscript>
     <link rel="stylesheet" href="../style/aboutus.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../nav2.css">
-    <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
+    <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../style/seo.css?v=1">
-    <script src="../script/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
 
  
     <style>
+       .about-defer-offscreen { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+       #captcha-text { color: #fff !important; background-color: #00008b !important; }
+       #refresh-captcha { color: #fff !important; background-color: #b00020 !important; }
+       #top-heading span[style*="color: red"],
+       #our-presence span[style*="color: red"] { color: #ff8a80 !important; }
+       #main-container-seo span[style*="color: red"],
+       #only-mobilwe-screen-no-laptop span[style*="color: red"] { color: #b00020 !important; }
+       #new-old-main-container span[style*="color: red"],
+       .faq-container span[style*="color: red"] { color: #ff8a80 !important; }
+       @media only screen and (min-width: 769px) {
+           #main-container-seo #intro-text span[style*="background-color: #0575E6"] { background-color: #004f9e !important; color: #fff !important; }
+           #main-conatiner-faq-container span[style*="color: red"], .faq-container span[style*="color: red"] { color: #b00020 !important; }
+           #main-conatiner-faq-container #shoot-email, .faq-container #shoot-email { background-color: #b00020 !important; color: #fff !important; }
+           #main-container-seo .benefit-item, #main-container-seo .benefit-heading { color: #1b0a54 !important; }
+           #seo-page-container span[style*="color: red"], #seo-page-container #brand-name { color: #ffb3b3 !important; }
+           #new-old-main-container span[style*="color: red"], #new-old-highlighted-text, #new-old-highlighted-text-right { color: #ffb3b3 !important; }
+           #our-client-all-page span[style*="color: red"] { color: #ffb3b3 !important; }
+       }
+       #container-map-for-company #map-img {
+           width: 100%;
+           height: auto;
+           aspect-ratio: 1907 / 1249;
+           object-fit: contain;
+       }
 #main-container-get-industry-top-container{
     background-color: white;
 
@@ -308,10 +331,10 @@ body{
             <h1 id="our-presence">Our <span style="color: red;">Presence</span></h1>
         </div>
         <div id="container-map-for-company">
-            <img id="map-img" src="../picture/Company (1)map.png" alt="">
+            <img id="map-img" src="../picture/company-map-optimized.webp" alt="BrandIxZen global office presence" width="1907" height="1249" fetchpriority="high" loading="eager" decoding="async">
                       </div>
 
-                      <div class="contactus-form-new-container">
+                      <div class="contactus-form-new-container about-defer-offscreen">
                         <div class="contactus-form-new-left-section">
                          <h1>
                           Let's talk about everything!
@@ -319,12 +342,12 @@ body{
                          <p>
                              Got questions or need assistance? We're here to help. Reach out, and we'll get back to you shortly!
                          </p>
-                         <img alt="Illustration of a person holding a file with a location pin on it" class="illustration" height="300" src="../picture/960x0.gif" width="500"/>
+                         <img alt="Illustration of a person holding a file with a location pin on it" class="illustration" height="300" src="../picture/960x0.gif" width="500" loading="lazy" decoding="async"/>
                         </div>
                         <div class="contactus-form-new-right-section">
-                         <input placeholder="Your name" type="text"/>
-                         <input placeholder="Email" type="email"/>
-                         <input placeholder="Phone Number" type="text"/>
+                         <input placeholder="Your name" type="text" aria-label="Your name" autocomplete="name"/>
+                         <input placeholder="Email" type="email" aria-label="Email address" autocomplete="email"/>
+                         <input placeholder="Phone Number" type="tel" aria-label="Phone number" autocomplete="tel"/>
                          <div class="radio-group">
                             <label><input type="radio" name="option" value="option1"/> Optimization</label>
                             <label><input type="radio" name="option" value="option2"/> Advertising</label>
@@ -337,7 +360,7 @@ body{
                         
                         <!-- Select for Mobile Only -->
                         <div class="select-group">
-                            <select name="option-mobile" id="selecteed-item-new">
+                            <select name="option-mobile" id="selecteed-item-new" aria-label="Service required">
                                 <option value="option1">Optimization</option>
                                 <option value="option2">Advertising</option>
                                 <option value="option3">Branding</option>
@@ -346,9 +369,9 @@ body{
                             </select>
                         </div>
                         
-                         <input placeholder="Subject" type="text"/>
-                         <textarea placeholder="Write your message" rows="5"></textarea>
-                         <button>
+                         <input placeholder="Subject" type="text" aria-label="Message subject"/>
+                         <textarea placeholder="Write your message" rows="5" aria-label="Message"></textarea>
+                         <button type="submit">
                           Send Message
                          </button>
                         </div>
@@ -462,16 +485,22 @@ const hideDropdown = (dropdownClass) => {
     
     
     
-        document.getElementById('input-form-below-top-right').addEventListener('submit', function(event) {
-          event.preventDefault();
-          const inputText = document.getElementById('input-box-below-top-right').value;
-          alert(`Submitted: ${inputText}`);
-        });
-    
-        document.getElementById("shoot-email").addEventListener("click", function() {
-        // Redirects to the default email app with the recipient pre-filled
+    const footerInputForm = document.getElementById('input-form-below-top-right');
+    if (footerInputForm) {
+      footerInputForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const footerInput = document.getElementById('input-box-below-top-right');
+        const inputText = footerInput ? footerInput.value : '';
+        alert(`Submitted: ${inputText}`);
+      });
+    }
+
+    const shootEmailButton = document.getElementById('shoot-email');
+    if (shootEmailButton) {
+      shootEmailButton.addEventListener('click', function() {
         window.location.href = "mailto:sharmapujan209@gmail.com";
-    });
+      });
+    }
     
     
     function openWhatsApp() {

@@ -11,12 +11,14 @@
             <li><a href="/about-us/careers">Careers</a></li>
             <li><a href="">News and Article</a></li>
             <li><a href="">Snippets</a></li>
-            <div class="spacer"></div> <!-- Spacer to push the buttons to the end -->
+            <li class="spacer" aria-hidden="true"></li> <!-- Spacer to push the buttons to the end -->
+            <li class="additional-buttons-wrapper" style="display: contents;">
             <ul id="additional-buttons">
                 <li class="quote-request"><a href="#name-adding-form" data-action="quote-request">Quote Request</a></li>
                 <li class="book-meeting"><a href="https://calendly.com/koyelp210/30min" data-action="book-meeting">Book Your Meeting</a></li>
                 <li id="chat-now"><a href="https://web.whatsapp.com/send?phone=+918348101800" data-action="whatsapp">Chat Now <i class="fab fa-whatsapp"></i></a></li>
             </ul>
+            </li>
         </ul>
 
     </nav>
