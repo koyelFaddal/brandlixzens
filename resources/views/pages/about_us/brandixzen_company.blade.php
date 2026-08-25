@@ -7,18 +7,70 @@
     <title>BrandIxZen - SEO, Digital Marketing & Online Branding Company</title>
         <meta name="description" content="BrandIxZen is one of the oldest SEO & Digital Marketing Company and
         Expert in Search Engine Optimization, Digital Marketing & Online Branding.">
-    <link rel="stylesheet" href="../style/footer.css">
-    <script src="../footerTemplate/sr.js"></script>
-    <link rel="stylesheet" href="../style/aboutus.css?v=1.2">
+    <link rel="preload" as="image" href="../picture/company-hero-mobile-poster.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="../picture/company-hero-animated.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="stylesheet" href="../style/footer.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../style/footer.css"></noscript>
+    <link rel="stylesheet" href="../style/aboutus.css?v=1.3">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../nav2.css">
-    <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css">
+    <link rel="stylesheet" href="../style/digital_marketing_for_d2c.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../style/digital_marketing_for_d2c.css"></noscript>
     <link rel="stylesheet" href="../style/seo.css?v=1">
-    <script src="../script/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    </noscript>
     <style>
+       .company-defer-offscreen {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 800px;
+       }
+       .faq-question[role="button"] {
+        min-height: 48px;
+        cursor: pointer;
+       }
+       .faq-question[role="button"]:focus-visible {
+        outline: 3px solid #b00020;
+        outline-offset: 3px;
+       }
+       #container-map-for-company #map-img {
+        height: auto;
+       }
+       .tickerwrappermpp .list1 img,
+       .certification-row img {
+        object-fit: contain;
+       }
+       #captcha-text {
+        color: #fff !important;
+        background-color: #00008b !important;
+       }
+       #refresh-captcha {
+        color: #fff !important;
+        background-color: #b00020 !important;
+       }
+       .website a {
+        color: #fff !important;
+        text-decoration: underline;
+       }
+       @media only screen and (min-width: 769px) {
+        #main-container-seo #intro-text span {
+            color: #b00020 !important;
+        }
+
+        #new-old-main-container #description-text span {
+            color: #ff8a80 !important;
+        }
+
+        .faq-container .contact-box #shoot-email {
+            color: #fff !important;
+            background-color: #b00020 !important;
+        }
+       }
        #container-map-for-company{
         margin-top: 5%;
        }
@@ -302,7 +354,7 @@ overflow-y: auto; */
     <div id="navbar-placeholder-mobile"></div>
     <div id="only-top-banner-mobile">
         <div class="background-gif">
-            <img id="background-image" src="../picture/social-media1.gif" alt="Background Image">
+            <img id="background-image" src="../picture/company-hero-mobile-poster.webp" data-animated-src="../picture/company-hero-mobile.webp" alt="BrandIxZen legacy and digital marketing expertise" width="750" height="1500" fetchpriority="high" loading="eager" decoding="async">
            
             <div class="very-new-navbartext-overlay">
                 <div class="new-old-text-content">
@@ -320,7 +372,7 @@ overflow-y: auto; */
         <div id="navbar-placeholder-laptop"></div>
         <div id="only-top-banner-laptop">
             <div class="background-gif">
-                <img id="background-image" src="../picture/social-media1.gif" alt="Background Image">
+                <img id="background-image" src="../picture/company-hero-animated.webp" alt="BrandIxZen legacy and digital marketing expertise" width="750" height="420" fetchpriority="high" loading="eager" decoding="async">
             </div>
         </div>
     <div class="container-old-new-new-hm">
@@ -338,7 +390,7 @@ overflow-y: auto; */
         </div>
     </div>
 
-    <div class="container">
+    <div class="container company-defer-offscreen">
         <div class="left-section">
             <div class="year">From Year <span class="new-cmp-highlited">2001</span></div>
             <div class="ampersand">&</div>
@@ -368,7 +420,7 @@ overflow-y: auto; */
             <br>
             <div class="section-title">BrandIxZen</div>
             <div class="section-content">
-                <span class="website"><a href="www.BrandIxZen.com">www.BrandIxZen.com</a></span>
+                <span class="website"><a href="https://www.brandixzen.com/">www.BrandIxZen.com</a></span>
                 <br><br>
                 In 2024, the Digital Marketing Services of the company was converted into a separate SBU in the name and style as BrandIxZen, with a dedicated website at www.BrandIxZen.com.
                 <br><br>
@@ -379,8 +431,8 @@ overflow-y: auto; */
 
 
 
-    <div id="container-map-for-company">
-        <img id="map-img" src="../picture/Company (1)map.png" alt="">
+    <div id="container-map-for-company" class="company-defer-offscreen">
+        <img id="map-img" src="../picture/company-map-optimized.webp" alt="BrandIxZen company journey and global presence" width="1907" height="1249" loading="lazy" decoding="async">
                   </div>
 
 
@@ -395,7 +447,7 @@ overflow-y: auto; */
 
 
     <div id="main-div-bellow-conatiner"></div>
-        <div class="credentials-container">
+        <div class="credentials-container company-defer-offscreen">
             <div class="content-wrapper">
                 <div class="left-section">
                     <h1>Our Credentials</h1>
@@ -448,9 +500,9 @@ overflow-y: auto; */
             <div class="additional-certifications">
                 <p class="new-text-para" id="text-para">Additionally, our team is certified by leading platforms and tools in the digital marketing industry, including</p>
                 <div class="certification-row">
-                    <img src="../picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot Certified Partner">
-                    <img src="../picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite Certified Partner">
-                    <img src="../picture/image37641.png" alt="MOZ Certified Partner">
+                    <img src="../picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot Certified Partner" loading="lazy" decoding="async">
+                    <img src="../picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite Certified Partner" loading="lazy" decoding="async">
+                    <img src="../picture/image37641.png" alt="MOZ Certified Partner" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -463,7 +515,7 @@ overflow-y: auto; */
 
 
 
-    <div id="main-container-seo">
+    <div id="main-container-seo" class="company-defer-offscreen">
         <div id="top-heading-container-seo-bellow">
             <h1 id="main-heading-seo">Why Choose <br><span style="color: red;">BrandIxZen</span></h1>
         <p id="intro-text">
@@ -511,15 +563,15 @@ Whether you have a question, need advice, or require assistance, we’re here fo
         </div>
     </div>
 
-    <div class="new-d2c-image-container">
+    <div class="new-d2c-image-container company-defer-offscreen">
         <div class="text-new-d2c">The <span style="color: red;">BrandIxZen</span> Difference</div>
         <div>
             <p id="para-text-d2c">Outsourcing your digital marketing to <span style="color: red;">BrandIxZen</span> means partnering with a team that has a rich history and a forward-thinking approach. Here’s what sets us apart:</p>
         </div>
-        <img src="../picture/B2B Body Section.png" alt="Your Image" class="image-newd2c">
+        <img src="../picture/company-difference-optimized.webp" alt="The BrandIxZen difference" class="image-newd2c" width="1907" height="1275" loading="lazy" decoding="async">
 
     </div>
-    <div class="background-newdec">
+    <div class="background-newdec company-defer-offscreen">
         <div id="para-bullet-d2c">
             <ul>
                 <p>
@@ -545,7 +597,7 @@ Whether you have a question, need advice, or require assistance, we’re here fo
         </div>
     </div>
     
-    <div id="new-old-main-container">   
+    <div id="new-old-main-container" class="company-defer-offscreen">
         <div id="new-old-left-section">
             <h1 id="new-old-main-heading">Join the <br><span style="color: red;">BrandIxZen</span> <br>Family</h1>
         </div>
@@ -564,7 +616,7 @@ goals. At <span style="color: red;">BrandIxZen</span> , your success is our miss
     </div>
     
 
-    <div id="main-conatiner-faq-container">
+    <div id="main-conatiner-faq-container" class="company-defer-offscreen">
         <div class="faq-container">
             <div class="faq-left">
                 <h1>Frequently asked <br> <span style="color: red;">questions</span></h1>
@@ -658,7 +710,7 @@ goals. At <span style="color: red;">BrandIxZen</span> , your success is our miss
             </div>
         </div>
     </div>
-    <div id="only-mobilwe-screen-no-laptop">
+    <div id="only-mobilwe-screen-no-laptop" class="company-defer-offscreen">
         <div class="about-container">
             <div id="heading-about-container-about">
                 <h1><span style="color: red;">BRANDIXZEN</span> PROFILE</h1>
@@ -679,33 +731,33 @@ goals. At <span style="color: red;">BrandIxZen</span> , your success is our miss
             <div class="image-about-container">
                 <div class="image-row-new-row">
     
-                    <img id="" src="../picture/1_-_ISO_9000-removebg-preview.png" alt="ISO">
+                    <img src="../picture/1_-_ISO_9000-removebg-preview.png" alt="ISO certification" loading="lazy" decoding="async">
     
     
-                    <img id="" src="../picture/2_-_CMMI-removebg-preview.png" alt="CMMI">
+                    <img src="../picture/2_-_CMMI-removebg-preview.png" alt="CMMI certification" loading="lazy" decoding="async">
     
                 
     
-                    <img id="new-ggogle-mobile" src="../picture/3 - Google Partner.png" alt="Google">
+                    <img id="new-ggogle-mobile" src="../picture/3 - Google Partner.png" alt="Google Partner" loading="lazy" decoding="async">
     
     
-                    <img id="" src="../picture/4 - Meta.png" alt="Meta">
+                    <img src="../picture/4 - Meta.png" alt="Meta Business Partner" loading="lazy" decoding="async">
     
     
-                    <img id="new-ggogle-mobile-amazon" src="../picture/WhatsApp Image 2024-07-24 at 12.04.16_36e4b743.jpg" alt="WhatsApp">
+                    <img id="new-ggogle-mobile-amazon" src="../picture/WhatsApp Image 2024-07-24 at 12.04.16_36e4b743.jpg" alt="Amazon Web Services Partner" loading="lazy" decoding="async">
     
               
     
-                    <img id="new-ggogle-mobile-amazon" src="../picture/6 - Microsoft.png" alt="Microsoft">
+                    <img id="new-ggogle-mobile-amazon" src="../picture/6 - Microsoft.png" alt="Microsoft Partner" loading="lazy" decoding="async">
     
-                    <img id="newlinkdin-in" src="../picture/5 - linkedin.jpg" alt="LinkedIn">
+                    <img id="newlinkdin-in" src="../picture/5 - linkedin.jpg" alt="LinkedIn Marketing Partner" loading="lazy" decoding="async">
     
     
-                    <img id="new-ggogle-mobile-hulot" src="../picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot">
+                    <img id="new-ggogle-mobile-hulot" src="../picture/7_-_HubSpot-removebg-preview.png" alt="HubSpot Certified Partner" loading="lazy" decoding="async">
     
-                    <img id="newhootsute" src="../picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite">
+                    <img id="newhootsute" src="../picture/8_-_HootSuite-removebg-preview.png" alt="Hootsuite Certified Partner" loading="lazy" decoding="async">
     
-                    <img id="newmoz" src="../picture/9_-_MOZ-removebg-preview.png" alt="Moz">
+                    <img id="newmoz" src="../picture/9_-_MOZ-removebg-preview.png" alt="Moz certification" loading="lazy" decoding="async">
     
                 </div>
     
@@ -717,11 +769,9 @@ goals. At <span style="color: red;">BrandIxZen</span> , your success is our miss
     </div>
     <div id="footer-placeholder"></div>
 
-    <script src="../footerTemplate/sr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
     <script src="../script/templatefooter.js"></script>
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
     
 
 
@@ -731,13 +781,15 @@ const dropdownHideTimers = new Map();
 
 const showDropdown = (dropdownClass) => {
     clearTimeout(dropdownHideTimers.get(dropdownClass));
-    document.querySelector(dropdownClass).classList.remove("hidden");
+    const dropdown = document.querySelector(dropdownClass);
+    if (dropdown) dropdown.classList.remove("hidden");
 }
 
 const hideDropdown = (dropdownClass) => {
     clearTimeout(dropdownHideTimers.get(dropdownClass));
     dropdownHideTimers.set(dropdownClass, setTimeout(() => {
-        document.querySelector(dropdownClass).classList.add("hidden");
+        const dropdown = document.querySelector(dropdownClass);
+        if (dropdown) dropdown.classList.add("hidden");
     }, 150));
 }
 
@@ -779,6 +831,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function refreshCaptcha(formId) {
         const captchaText = document.querySelector(`#${formId} #captcha-text`);
+        if (!captchaText) return;
         captchaText.textContent = generateCaptcha();
     }
 
@@ -786,11 +839,12 @@ document.addEventListener('DOMContentLoaded', () => {
         refreshCaptcha(formId);
 
         const refreshButton = document.querySelector(`#${formId} #refresh-captcha`);
+        const form = document.getElementById(formId);
+        if (!refreshButton || !form) return;
         refreshButton.addEventListener('click', () => {
             refreshCaptcha(formId);
         });
 
-        const form = document.getElementById(formId);
         form.addEventListener('submit', (event) => {
             event.preventDefault();
             const captchaInput = form.querySelector('#captcha').value;
@@ -809,29 +863,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.querySelectorAll('.faq-question').forEach(item => {
-    item.addEventListener('click', () => {
+    item.setAttribute('role', 'button');
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('aria-expanded', 'false');
+
+    const toggleFaq = () => {
         const answer = item.nextElementSibling;
         const btn = item.querySelector('.toggle-btn');
         
         if (answer.style.display === 'block') {
             answer.style.display = 'none';
             btn.textContent = '+';
+            item.setAttribute('aria-expanded', 'false');
         } else {
             answer.style.display = 'block';
             btn.textContent = '-';
+            item.setAttribute('aria-expanded', 'true');
+        }
+    };
+
+    item.addEventListener('click', toggleFaq);
+    item.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleFaq();
         }
     });
 });
 
 
 
-    document.getElementById('input-form-below-top-right').addEventListener('submit', function(event) {
+    const newsletterForm = document.getElementById('input-form-below-top-right');
+    if (newsletterForm) newsletterForm.addEventListener('submit', function(event) {
       event.preventDefault();
       const inputText = document.getElementById('input-box-below-top-right').value;
       alert(`Submitted: ${inputText}`);
     });
 
-    document.getElementById("shoot-email").addEventListener("click", function() {
+    const shootEmailButton = document.getElementById("shoot-email");
+    if (shootEmailButton) shootEmailButton.addEventListener("click", function() {
     // Redirects to the default email app with the recipient pre-filled
     window.location.href = "mailto:sharmapujan209@gmail.com";
 });
@@ -866,8 +936,6 @@ $('#whatsappLink').on('click', function(event) {
   openWhatsApp();
 });
 </script>
-<script src="../footerTemplate/sr.js"></script>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         fetch('/partials/navbar-desktop')
@@ -875,7 +943,7 @@ $('#whatsappLink').on('click', function(event) {
             .then(data => {
                 document.getElementById('navbar-placeholder-laptop').innerHTML = data;
                 const logo = document.querySelector("#logo");
-    logo.addEventListener("click", () => {
+    if (logo) logo.addEventListener("click", () => {
         window.location.href = "/";
     });
        
@@ -890,7 +958,7 @@ $('#whatsappLink').on('click', function(event) {
             .then(data => {
                 document.getElementById('navbar-placeholder-mobile').innerHTML = data;
                 const logo = document.querySelector(".logo");
-logo.addEventListener("click", () => {
+if (logo) logo.addEventListener("click", () => {
     window.location.href = "/";
 });
                 
@@ -915,6 +983,7 @@ logo.addEventListener("click", () => {
 
     function toggleMenu() {
         const menu = document.getElementById("menu");
+        if (!menu) return;
         if (menu.style.display === "block") {
             menu.style.display = "none";
         } else {
@@ -931,6 +1000,11 @@ logo.addEventListener("click", () => {
   var advertising=document.querySelector(".wellness-dropdown");
   var branding=document.querySelector(".sleep-dropdown");
   var marketing=document.querySelector(".second-sleep-dropdown");
+  var otherServices = document.querySelector("#other-services");
+  var industries = document.querySelector("#industries");
+  var verticalLine = document.querySelector("#vertical-hrline");
+
+  if (!dropdowns || !logo || !optimization || !advertising || !branding || !marketing || !otherServices || !industries || !verticalLine) return;
 
   // Set positions for dropdown and logo
   dropdowns.style.position = 'fixed';
@@ -955,9 +1029,9 @@ logo.addEventListener("click", () => {
     localStorage.setItem('dropdownState', 'scrolled');
     
     // Hide specific elements as needed
-    document.querySelector("#other-services").style.display = "none";
-    document.querySelector("#industries").style.display = "none";
-    document.querySelector("#vertical-hrline").style.display = "none";
+    otherServices.style.display = "none";
+    industries.style.display = "none";
+    verticalLine.style.display = "none";
   } else {
     dropdowns.style.justifyContent = 'space-between';
     dropdowns.style.backgroundColor = 'transparent';
@@ -975,9 +1049,9 @@ logo.addEventListener("click", () => {
     // Save state to localStorage
     localStorage.setItem('dropdownState', 'notScrolled');
     
-    document.querySelector("#other-services").style.display="block";
-    document.querySelector("#industries").style.display="block";
-    document.querySelector("#vertical-hrline").style.display="block";
+    otherServices.style.display="block";
+    industries.style.display="block";
+    verticalLine.style.display="block";
   }
 
   // Logo styling for smooth transition
@@ -995,6 +1069,11 @@ window.addEventListener('load', function() {
   var dropdowns = document.querySelector('.drop-downs');
   var logo = document.querySelector('#logo img');
   var savedState = localStorage.getItem('dropdownState');
+  var otherServices = document.querySelector("#other-services");
+  var industries = document.querySelector("#industries");
+  var verticalLine = document.querySelector("#vertical-hrline");
+
+  if (!dropdowns || !logo || !otherServices || !industries || !verticalLine) return;
 
   if (savedState === 'scrolled') {
     dropdowns.style.backgroundColor = '#312c26'; 
@@ -1007,9 +1086,9 @@ window.addEventListener('load', function() {
     dropdowns.style.justifyContent = 'flex-start';
     
     // Hide specific elements
-    document.querySelector("#other-services").style.display = "none";
-    document.querySelector("#industries").style.display = "none";
-    document.querySelector("#vertical-hrline").style.display = "none";
+    otherServices.style.display = "none";
+    industries.style.display = "none";
+    verticalLine.style.display = "none";
     
     logo.style.width = '30px';
     logo.style.top = '10px';
@@ -1024,9 +1103,9 @@ window.addEventListener('load', function() {
     dropdowns.style.padding = '10px 20px'; 
 
     // Show specific elements
-    document.querySelector("#other-services").style.display="block";
-    document.querySelector("#industries").style.display="block";
-    document.querySelector("#vertical-hrline").style.display="block";
+    otherServices.style.display="block";
+    industries.style.display="block";
+    verticalLine.style.display="block";
     
     logo.style.width = '80px';
     logo.style.top = '20px';
@@ -1071,6 +1150,24 @@ window.addEventListener('load', function() {
                     infinite.play();
                 });
 
+</script>
+<script>
+    (() => {
+        const mobileHero = document.querySelector('#only-top-banner-mobile img[data-animated-src]');
+        if (!mobileHero) return;
+
+        const startMobileHeroAnimation = () => {
+            if (mobileHero.dataset.animatedSrc) {
+                mobileHero.src = mobileHero.dataset.animatedSrc;
+                delete mobileHero.dataset.animatedSrc;
+            }
+        };
+
+        window.addEventListener('pointerdown', startMobileHeroAnimation, { once: true, passive: true });
+        window.addEventListener('touchstart', startMobileHeroAnimation, { once: true, passive: true });
+        window.addEventListener('scroll', startMobileHeroAnimation, { once: true, passive: true });
+        window.addEventListener('keydown', startMobileHeroAnimation, { once: true });
+    })();
 </script>
 </html>
 
